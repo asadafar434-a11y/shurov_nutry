@@ -27,7 +27,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="programs" className="py-32 bg-[#0a0a0a] border-t border-white/5">
+    <section id="programs" className="py-32 bg-surface border-t border-white/5">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,7 +35,7 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-emerald-400 text-xs uppercase tracking-[0.3em] mb-6">
+          <p className="text-brand text-xs uppercase tracking-[0.3em] mb-6">
             Отзывы
           </p>
           <h2 className="text-5xl lg:text-6xl mb-6 text-white font-bold uppercase tracking-wide">
@@ -57,7 +57,7 @@ export function Testimonials() {
               className="bg-white/5 border border-white/10 hover:border-white/20 p-8 transition-all duration-500 group"
             >
               {/* Quote */}
-              <Quote className="w-10 h-10 text-emerald-400/30 mb-6" />
+              <Quote className="w-10 h-10 text-brand/30 mb-6" />
 
               {/* Text */}
               <p className="text-white/60 group-hover:text-white/80 mb-8 leading-relaxed transition-colors">
@@ -66,7 +66,7 @@ export function Testimonials() {
 
               {/* Result badge */}
               <div className="mb-8">
-                <span className="px-4 py-2 border border-emerald-400/50 text-emerald-400 text-sm font-semibold uppercase tracking-wider">
+                <span className="px-4 py-2 border border-brand/50 text-brand text-sm font-semibold uppercase tracking-wider">
                   {testimonial.result}
                 </span>
               </div>

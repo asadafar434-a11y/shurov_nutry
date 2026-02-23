@@ -46,12 +46,12 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
               transition={{ duration: 0.3 }}
               className="fixed inset-4 md:inset-auto md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:w-full md:max-w-3xl z-50"
             >
-              <div className="bg-[#0a0a0a] border border-white/10 h-full md:h-auto max-h-[90vh] overflow-y-auto">
+              <div className="bg-surface border border-white/10 h-full md:h-auto max-h-[90vh] overflow-y-auto">
                 {/* Header */}
-                <div className="sticky top-0 bg-[#0a0a0a] border-b border-white/10 p-8 flex items-center justify-between z-10">
+                <div className="sticky top-0 bg-surface border-b border-white/10 p-8 flex items-center justify-between z-10">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 border border-emerald-400 flex items-center justify-center">
-                      <service.icon className="w-6 h-6 text-emerald-400" />
+                    <div className="w-12 h-12 border border-brand flex items-center justify-center">
+                      <service.icon className="w-6 h-6 text-brand" />
                     </div>
                     <div>
                       <h3 className="text-2xl text-white font-bold uppercase tracking-wide">
@@ -74,7 +74,7 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
                 <div className="p-8">
                   {/* Description */}
                   <div className="mb-8">
-                    <h4 className="text-emerald-400 text-xs uppercase tracking-[0.3em] mb-4">
+                    <h4 className="text-brand text-xs uppercase tracking-[0.3em] mb-4">
                       Описание программы
                     </h4>
                     <p className="text-white/60 leading-relaxed text-lg">
@@ -84,7 +84,7 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
 
                   {/* What's included */}
                   <div className="mb-8">
-                    <h4 className="text-emerald-400 text-xs uppercase tracking-[0.3em] mb-6">
+                    <h4 className="text-brand text-xs uppercase tracking-[0.3em] mb-6">
                       Что входит
                     </h4>
                     <div className="space-y-4">
@@ -96,7 +96,7 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
                           transition={{ delay: index * 0.1 }}
                           className="flex items-start gap-4"
                         >
-                          <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                          <CheckCircle className="w-5 h-5 text-brand flex-shrink-0 mt-0.5" />
                           <span className="text-white/70">{item}</span>
                         </motion.div>
                       ))}
@@ -115,7 +115,7 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
                     </div>
                     <button
                       onClick={handlePayment}
-                      className="px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-white transition-all duration-300 text-sm uppercase tracking-wider"
+                      className="px-10 py-4 bg-brand hover:bg-brand-dark text-white transition-all duration-300 text-sm uppercase tracking-wider"
                     >
                       Оплатить
                     </button>

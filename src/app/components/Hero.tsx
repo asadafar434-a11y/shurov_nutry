@@ -6,7 +6,7 @@ import contactImage from '@/assets/9a32dbb6ed65f0283e8974d5278932d4bcae051e.png'
 
 export function Hero() {
   return (
-    <section className="min-h-screen bg-[#0a0a0a] relative flex items-center justify-center overflow-hidden">
+    <section className="min-h-screen bg-surface relative flex items-center justify-center overflow-hidden">
       {/* Background texture */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -32,7 +32,7 @@ export function Hero() {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="absolute left-12 top-1/2 -translate-y-1/2 hidden lg:block"
       >
-        <button className="flex items-center gap-3 px-5 py-2.5 border border-white/20 hover:border-emerald-400 text-white/60 hover:text-white transition-colors group">
+        <button className="flex items-center gap-3 px-5 py-2.5 border border-white/20 hover:border-brand text-white/60 hover:text-white transition-colors group">
           <Menu className="w-4 h-4" />
           <span className="text-xs uppercase tracking-wider">Меню</span>
         </button>
@@ -56,7 +56,7 @@ export function Hero() {
               <h1 className="text-7xl lg:text-8xl text-white uppercase tracking-[0.15em] font-bold mb-6 leading-none">
                 ELENA
               </h1>
-              <p className="text-emerald-400 text-sm uppercase tracking-[0.3em] mb-8">
+              <p className="text-brand text-sm uppercase tracking-[0.3em] mb-8">
                 Art of Nutrition
               </p>
             </motion.div>
@@ -78,7 +78,7 @@ export function Hero() {
             >
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-4 border border-white/20 hover:border-emerald-400 text-white hover:text-emerald-400 transition-all duration-300 text-sm uppercase tracking-wider group"
+                className="px-8 py-4 border border-white/20 hover:border-brand text-white hover:text-brand transition-all duration-300 text-sm uppercase tracking-wider group"
               >
                 Записаться
               </button>
@@ -147,7 +147,7 @@ export function Hero() {
         className="absolute bottom-12 left-0 right-0 text-center"
       >
         <p className="text-white/30 text-xs uppercase tracking-[0.3em]">
-          Мы создаем <span className="text-emerald-400">здоровье</span>
+          Мы создаем <span className="text-brand">здоровье</span>
         </p>
       </motion.div>
 
@@ -167,7 +167,7 @@ export function Hero() {
             { icon: '✨', text: 'Shine' }
           ].map((item, i) => (
             <div key={i} className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="w-12 h-12 border border-white/20 group-hover:border-emerald-400 flex items-center justify-center transition-colors">
+              <div className="w-12 h-12 border border-white/20 group-hover:border-brand flex items-center justify-center transition-colors">
                 <span className="text-xl">{item.icon}</span>
               </div>
               <span className="text-white/40 group-hover:text-white text-[10px] uppercase tracking-wider transition-colors">

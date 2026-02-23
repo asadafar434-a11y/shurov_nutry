@@ -35,7 +35,7 @@ export function Navigation() {
               <h1 className="text-3xl text-white uppercase tracking-[0.3em] font-bold">
                 ELENA
               </h1>
-              <p className="text-[10px] text-emerald-400 uppercase tracking-[0.2em] mt-0.5">
+              <p className="text-[10px] text-brand uppercase tracking-[0.2em] mt-0.5">
                 Art of Nutrition
               </p>
             </div>
@@ -67,13 +67,13 @@ export function Navigation() {
             transition={{ delay: 0.4 }}
             className="flex items-center gap-3"
           >
-            <a href="#" className="w-9 h-9 border border-white/20 rounded-sm flex items-center justify-center hover:border-emerald-400 hover:text-emerald-400 text-white/60 transition-colors">
+            <a href="#" className="w-9 h-9 border border-white/20 rounded-sm flex items-center justify-center hover:border-brand hover:text-brand text-white/60 transition-colors">
               <Instagram className="w-4 h-4" />
             </a>
-            <a href="#" className="w-9 h-9 border border-white/20 rounded-sm flex items-center justify-center hover:border-emerald-400 hover:text-emerald-400 text-white/60 transition-colors">
+            <a href="#" className="w-9 h-9 border border-white/20 rounded-sm flex items-center justify-center hover:border-brand hover:text-brand text-white/60 transition-colors">
               <Mail className="w-4 h-4" />
             </a>
-            <a href="#" className="w-9 h-9 border border-white/20 rounded-sm flex items-center justify-center hover:border-emerald-400 hover:text-emerald-400 text-white/60 transition-colors">
+            <a href="#" className="w-9 h-9 border border-white/20 rounded-sm flex items-center justify-center hover:border-brand hover:text-brand text-white/60 transition-colors">
               <Phone className="w-4 h-4" />
             </a>
           </motion.div>

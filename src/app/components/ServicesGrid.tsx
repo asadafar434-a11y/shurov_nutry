@@ -111,7 +111,7 @@ export function ServicesGrid() {
   const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
 
   return (
-    <section id="services" className="py-32 bg-[#0a0a0a] border-t border-white/5">
+    <section id="services" className="py-32 bg-surface border-t border-white/5">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -119,7 +119,7 @@ export function ServicesGrid() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-emerald-400 text-xs uppercase tracking-[0.3em] mb-6">
+          <p className="text-brand text-xs uppercase tracking-[0.3em] mb-6">
             Программы
           </p>
           <h2 className="text-5xl lg:text-6xl mb-6 text-white font-bold uppercase tracking-wide">
@@ -141,10 +141,10 @@ export function ServicesGrid() {
               className="group cursor-pointer"
               onClick={() => setSelectedService(service)}
             >
-              <div className="bg-white/5 border border-white/10 hover:border-emerald-400/50 p-8 transition-all duration-500 h-full">
+              <div className="bg-white/5 border border-white/10 hover:border-brand/50 p-8 transition-all duration-500 h-full">
                 {/* Icon */}
-                <div className="w-14 h-14 border border-white/20 group-hover:border-emerald-400 flex items-center justify-center mb-8 transition-all duration-300">
-                  <service.icon className="w-7 h-7 text-white/60 group-hover:text-emerald-400 transition-colors" />
+                <div className="w-14 h-14 border border-white/20 group-hover:border-brand flex items-center justify-center mb-8 transition-all duration-300">
+                  <service.icon className="w-7 h-7 text-white/60 group-hover:text-brand transition-colors" />
                 </div>
 
                 {/* Content */}
@@ -156,8 +156,8 @@ export function ServicesGrid() {
                   <span className="text-2xl text-white font-bold">
                     {service.price}
                   </span>
-                  <div className="w-8 h-8 border border-white/20 group-hover:border-emerald-400 flex items-center justify-center transition-all">
-                    <svg className="w-4 h-4 text-white/60 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-8 h-8 border border-white/20 group-hover:border-brand flex items-center justify-center transition-all">
+                    <svg className="w-4 h-4 text-white/60 group-hover:text-brand group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -185,7 +185,7 @@ export function ServicesGrid() {
             </div>
 
             <div className="relative z-10">
-              <p className="text-emerald-400 text-xs uppercase tracking-[0.3em] mb-6">
+              <p className="text-brand text-xs uppercase tracking-[0.3em] mb-6">
                 Специальное предложение
               </p>
               <h3 className="text-4xl md:text-5xl mb-6 text-white font-bold uppercase tracking-wide">
@@ -196,7 +196,7 @@ export function ServicesGrid() {
               </p>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-10 py-4 border border-white/20 hover:border-emerald-400 text-white hover:text-emerald-400 transition-all duration-300 text-sm uppercase tracking-wider inline-flex items-center gap-3"
+                className="px-10 py-4 border border-white/20 hover:border-brand text-white hover:text-brand transition-all duration-300 text-sm uppercase tracking-wider inline-flex items-center gap-3"
               >
                 Записаться
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

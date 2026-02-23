@@ -4,7 +4,7 @@ import aboutImage from '@/assets/a8eea92051d14e6a7c46659a265d548f3f638cea.png';
 
 export function AboutModern() {
   return (
-    <section id="about" className="py-32 bg-[#0a0a0a] border-t border-white/5">
+    <section id="about" className="py-32 bg-surface border-t border-white/5">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left side - Image */}
@@ -33,7 +33,7 @@ export function AboutModern() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="absolute -bottom-8 -right-8 bg-emerald-500 text-white p-8"
+                className="absolute -bottom-8 -right-8 bg-brand text-white p-8"
               >
                 <div className="text-5xl font-bold mb-2">10+</div>
                 <div className="text-xs uppercase tracking-wider opacity-90">Лет опыта</div>
@@ -54,7 +54,7 @@ export function AboutModern() {
               viewport={{ once: true }}
               className="mb-8"
             >
-              <p className="text-emerald-400 text-xs uppercase tracking-[0.3em] mb-6">
+              <p className="text-brand text-xs uppercase tracking-[0.3em] mb-6">
                 Философия
               </p>
             </motion.div>
@@ -103,7 +103,7 @@ export function AboutModern() {
                   transition={{ delay: 0.2 * index }}
                   className="flex items-start gap-4 group"
                 >
-                  <div className="w-px h-8 bg-emerald-400 group-hover:h-12 transition-all duration-300"></div>
+                  <div className="w-px h-8 bg-brand group-hover:h-12 transition-all duration-300"></div>
                   <p className="text-white/60 group-hover:text-white transition-colors pt-1">
                     {feature}
                   </p>
@@ -118,7 +118,7 @@ export function AboutModern() {
               transition={{ delay: 0.6 }}
               whileHover={{ scale: 1.05 }}
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="mt-12 px-8 py-4 border border-white/20 hover:border-emerald-400 text-white hover:text-emerald-400 transition-all duration-300 text-sm uppercase tracking-wider"
+              className="mt-12 px-8 py-4 border border-white/20 hover:border-brand text-white hover:text-brand transition-all duration-300 text-sm uppercase tracking-wider"
             >
               Узнать больше
             </motion.button>
