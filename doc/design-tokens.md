@@ -37,6 +37,38 @@ Tailwind v4 поддерживает модификаторы прозрачно
 
 Шрифты подключены через Google Fonts в `src/styles/fonts.css`.
 
+## Брейкпоинты
+
+Определены в `theme.css` (`--breakpoint-*`) и продублированы в `src/app/hooks/useBreakpoint.ts` (`BREAKPOINTS`).
+
+| Токен | Значение | CSS-префикс | JS (useBreakpoint) |
+|---|---|---|---|
+| `--breakpoint-sm` | `640px` | `sm:` | `isMobile` = < 640 |
+| `--breakpoint-md` | `768px` | `md:` | — |
+| `--breakpoint-lg` | `1024px` | `lg:` | `isDesktop` = >= 1024 |
+| `--breakpoint-xl` | `1280px` | `xl:` | `isWidescreen` = >= 1280 |
+| `--breakpoint-2xl` | `1536px` | `2xl:` | — |
+
+`isTablet` = >= 640 && < 1024.
+
+### Использование в CSS (Tailwind)
+
+```html
+<div class="px-4 md:px-8 lg:px-12">Responsive padding</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">Grid</div>
+```
+
+### Использование в JS (React)
+
+```tsx
+import { useBreakpoint } from '@/app/hooks/useBreakpoint';
+
+function MyComponent() {
+  const { isMobile, isDesktop, breakpoint } = useBreakpoint();
+  return isMobile ? <MobileView /> : <DesktopView />;
+}
+```
+
 ## shadcn/ui токены
 
 Стандартные токены shadcn/ui сохранены для совместимости с компонентами из `ui/`:

@@ -46,6 +46,9 @@ src/
 │       ├── TestimonialsModern.tsx     # [legacy] Промежуточная версия Testimonials
 │       └── Footer.tsx                # [legacy] Старая версия Footer
 │
+├── hooks/
+│   └── useBreakpoint.ts              # Хук адаптива (isMobile, isTablet, isDesktop, isWidescreen)
+│
 ├── imports/                          # Код из Figma Make (сырой экспорт)
 │   ├── Site.tsx                      # Полная страница из Figma
 │   ├── Logo.tsx                      # SVG-логотип

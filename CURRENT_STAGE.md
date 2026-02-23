@@ -2,9 +2,9 @@
 
 > Обновлено: 2026-02-23
 
-## Статус: Инфраструктура настроена, Modern-компоненты готовы
+## Статус: Инфраструктура настроена, готовы к адаптиву
 
-Проект собирается и запускается. Настроена система дизайн-токенов. Modern-компоненты подготовлены, но приложение пока рендерит Figma-экспорт через `InteractiveSite`.
+Проект собирается и запускается. Настроена система дизайн-токенов, брейкпоинтов и React-хелпер для адаптива. Modern-компоненты подготовлены, но приложение пока рендерит Figma-экспорт через `InteractiveSite`.
 
 ## Что уже сделано
 
@@ -16,15 +16,17 @@
 - [x] Добавление дизайн-токенов в `@theme inline` (brand, surface, шрифты)
 - [x] Исправление `fonts.css`: Manrope вместо Playfair Display
 - [x] Замена хардкод-цветов в 9 Modern-компонентах (`emerald-*` → `brand`, `#0a0a0a` → `surface`)
-- [x] Проверка сборки — `pnpm build` проходит успешно
 - [x] Создание документации (`doc/`)
+- [x] Обновление Cursor rules: чтение/обновление `doc/` в workflow
+- [x] Добавление брейкпоинт-токенов в `@theme inline` (sm/md/lg/xl/2xl)
+- [x] Создание React-хука `useBreakpoint` (`src/app/hooks/useBreakpoint.ts`)
 
 ## Текущие задачи
 
 - [ ] Подключить Modern-компоненты вместо InteractiveSite в `App.tsx`
 - [ ] Удалить legacy-компоненты (About.tsx, Contact.tsx, Services.tsx, Footer.tsx и др.)
 - [ ] Сверить Modern-компоненты с макетом Figma
-- [ ] Определить, нужен ли `InteractiveSite.tsx` после перехода на Modern-компоненты
+- [ ] Реализовать адаптивную вёрстку в Modern-компонентах (используя `useBreakpoint` и Tailwind responsive)
 
 ## Архитектура (ключевые файлы)
 
@@ -32,6 +34,7 @@
 |------|-----------|
 | `src/main.tsx` | Точка входа приложения |
 | `src/app/App.tsx` | Корневой компонент, сейчас рендерит `InteractiveSite` |
+| `src/app/hooks/useBreakpoint.ts` | Хук адаптива: isMobile, isTablet, isDesktop, isWidescreen |
 | `src/app/components/Navigation.tsx` | Навигация |
 | `src/app/components/Hero.tsx` | Главный экран |
 | `src/app/components/AboutModern.tsx` | Секция «Философия» |
@@ -41,7 +44,7 @@
 | `src/app/components/FooterModern.tsx` | Подвал |
 | `src/app/components/ServiceModal.tsx` | Модалка деталей услуги |
 | `src/app/components/PaymentModal.tsx` | Модалка оплаты |
-| `src/styles/theme.css` | Дизайн-токены + shadcn/ui переменные |
+| `src/styles/theme.css` | Дизайн-токены, брейкпоинты, shadcn/ui переменные |
 | `vite.config.ts` | Конфигурация Vite + алиас `@` |
 
 ## Дизайн-токены
@@ -55,6 +58,19 @@
 | `--color-surface` | `bg-surface` | `#0a0a0a` |
 | `--font-heading` | `font-heading` | Manrope |
 | `--font-body` | `font-body` | Inter |
+
+## Брейкпоинты
+
+Определены в `theme.css` (`--breakpoint-*`) и дублированы в `src/app/hooks/useBreakpoint.ts`.
+
+| Брейкпоинт | CSS-префикс | Значение | useBreakpoint |
+|---|---|---|---|
+| xs | (по умолчанию) | < 640px | `isMobile` |
+| sm | `sm:` | >= 640px | `isTablet` (640–1023) |
+| md | `md:` | >= 768px | — |
+| lg | `lg:` | >= 1024px | `isDesktop` |
+| xl | `xl:` | >= 1280px | `isWidescreen` |
+| 2xl | `2xl:` | >= 1536px | — |
 
 ## Ссылки
 
@@ -75,10 +91,8 @@
 
 **Дата:** 2026-02-23
 **Что сделано:**
-- Исправлены `figma:asset/` импорты → `@/assets/` (реальные пути к PNG)
-- Добавлена система дизайн-токенов Tailwind v4 (`brand`, `surface`, шрифты)
-- Обновлены fonts.css (Manrope + Inter)
-- Заменены хардкод-цвета в 9 компонентах на токены
-- Создана документация: `doc/architecture.md`, `doc/design-tokens.md`, `doc/components.md`
+- Обновлены Cursor rules: добавлено чтение/обновление `doc/` в workflow и project
+- Добавлены явные брейкпоинт-токены в `theme.css` (sm/md/lg/xl/2xl)
+- Создан хук `useBreakpoint` в `src/app/hooks/useBreakpoint.ts` (isMobile, isTablet, isDesktop, isWidescreen, breakpoint, width)
 
-**Следующий шаг:** Подключить Modern-компоненты в `App.tsx` вместо `InteractiveSite`, сверить с макетом Figma.
+**Следующий шаг:** Подключить Modern-компоненты в `App.tsx`, реализовать адаптивную вёрстку.
