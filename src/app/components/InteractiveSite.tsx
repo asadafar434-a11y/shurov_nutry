@@ -188,7 +188,7 @@ export function InteractiveSite() {
   }, [formData]);
 
   return (
-    <motion.div ref={siteRef} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+    <motion.div ref={siteRef} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }} className="overflow-x-clip">
       <Site />
       <style>{`
         /* Logo subtitle Glass effect */
