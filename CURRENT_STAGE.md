@@ -2,9 +2,9 @@
 
 > Обновлено: 2026-02-23
 
-## Статус: Орбитальная анимация в Hero, layout 1200px
+## Статус: Полноширинные фоны, фиксы карточек, начало адаптива
 
-Проект собирается и запускается. Layout ограничен до `max-width: 1200px` с центрированием. В Hero-блоке реализована орбитальная анимация кружков-сателлитов (CSS @keyframes, подход как Solar System из CodePen). Modern-компоненты подготовлены, но приложение рендерит Figma-экспорт через `InteractiveSite`.
+Проект собирается и запускается. Layout ограничен до `max-width: 1240px` с `px-5` (20px padding) и центрированием. Контентная область остаётся 1200px на десктопе. Полноширинные фоны реализованы через `w-screen` + `overflow-x-clip`. Орбитальная анимация в Hero работает.
 
 ## Что уже сделано
 
@@ -23,13 +23,25 @@
 - [x] Ограничение layout до `max-width: 1200px` (Site.tsx, theme.css)
 - [x] Переработка компонента Logo (`src/imports/Logo.tsx`)
 - [x] Орбитальная анимация кружков-сателлитов в Hero (Site.tsx, InteractiveSite.tsx)
+- [x] Полноширинные фоны: Header, HeroBlock, Footer (w-screen + overflow-x-clip)
+- [x] Glass-эффект на Header (backdrop-filter blur)
+- [x] Glass-эффект на "3+" элемент (Container10, subtle blur)
+- [x] Glass-эффект на "Гарантия" блок (Container60, центрирован)
+- [x] Текст "Результат через 2 недели..." в одну строку (whitespace-nowrap)
+- [x] "Философия" — заголовок по центру (items-center на Frame7)
+- [x] "Философия" — z-[1] на контенте поверх GradientContainer
+- [x] "Индивидуальный подход..." — flex-1 min-w-0 whitespace-nowrap (Paragraph1/2/3)
+- [x] Карточки "Истории успеха" — плашки кг на одной высоте (Text1 top: 227.2px)
+- [x] Карточки "Истории успеха" — исправлено наложение профессии на имя (flex-col)
+- [x] Футер — "Услуги" и "О специалисте" закомментированы, контакты на первом столбце
+- [x] Адаптивный padding: px-5 (20px) + max-w-[1240px] на корневом Site
 
 ## Текущие задачи
 
+- [ ] Продолжить адаптивную вёрстку (медиа-запросы для md/sm)
 - [ ] Подключить Modern-компоненты вместо InteractiveSite в `App.tsx`
 - [ ] Удалить legacy-компоненты (About.tsx, Contact.tsx, Services.tsx, Footer.tsx и др.)
 - [ ] Сверить Modern-компоненты с макетом Figma
-- [ ] Реализовать адаптивную вёрстку в Modern-компонентах (используя `useBreakpoint` и Tailwind responsive)
 
 ## Архитектура (ключевые файлы)
 
@@ -38,15 +50,8 @@
 | `src/main.tsx` | Точка входа приложения |
 | `src/app/App.tsx` | Корневой компонент, сейчас рендерит `InteractiveSite` |
 | `src/app/hooks/useBreakpoint.ts` | Хук адаптива: isMobile, isTablet, isDesktop, isWidescreen |
-| `src/app/components/Navigation.tsx` | Навигация |
-| `src/app/components/Hero.tsx` | Главный экран (Modern, не подключён) |
-| `src/app/components/AboutModern.tsx` | Секция «Философия» |
-| `src/app/components/ServicesGrid.tsx` | Услуги (6 карточек + CTA) |
-| `src/app/components/Testimonials.tsx` | Отзывы |
-| `src/app/components/ContactModern.tsx` | Контакты (форма + фото) |
-| `src/app/components/FooterModern.tsx` | Подвал |
-| `src/app/components/ServiceModal.tsx` | Модалка деталей услуги |
-| `src/app/components/PaymentModal.tsx` | Модалка оплаты |
+| `src/app/components/InteractiveSite.tsx` | Обёртка: Site + интерактивность + CSS анимации |
+| `src/imports/Site.tsx` | Figma-экспорт, основной рендер страницы |
 | `src/styles/theme.css` | Дизайн-токены, брейкпоинты, shadcn/ui переменные |
 | `vite.config.ts` | Конфигурация Vite + алиас `@` |
 
@@ -75,33 +80,25 @@
 | xl | `xl:` | >= 1280px | `isWidescreen` |
 | 2xl | `2xl:` | >= 1536px | — |
 
-## Ссылки
-
-- [Макет Figma](https://www.figma.com/design/FOUwqwJBkR5sOuAdGMpVOb/)
-- `doc/architecture.md` — архитектура проекта
-- `doc/design-tokens.md` — система дизайн-токенов
-- `doc/components.md` — описание компонентов
-- `PHILOSOPHY.md` — подход к работе
-- `.cursor/rules/project.mdc` — правила проекта
-
 ## Layout
 
-- Максимальная ширина макета: **1200px** (`max-w-[1200px] mx-auto` на корневом `Site` div)
-- Body background: `bg-surface` (`#0a0a0a`) — обеспечивает единый тёмный фон за пределами контейнера
-- Все секции используют `w-full` вместо фиксированных ширин
-- Убраны `px-[120px]` из Header, Frame7 (Философия), Footer — они были рассчитаны на 1440px layout
+- Максимальная ширина: **1240px** (`max-w-[1240px]`) с `px-5` (20px padding) → контентная область 1200px
+- Центрирование: `mx-auto`
+- Body background: `bg-surface` (`#0a0a0a`)
+- Полноширинные фоны: через абсолютный div `w-screen left-1/2 -translate-x-1/2`
+- Overflow: `overflow-x-clip` на `motion.div` в InteractiveSite (предотвращает горизонтальный скролл от `w-screen`)
+
+### Полноширинные секции
+
+| Секция | Фон | Доп. эффекты |
+|--------|-----|-------------|
+| Header | `rgba(7,7,7,0.5)` | `backdrop-filter: blur(16px)` |
+| HeroBlock | `#161616` | — |
+| Footer | `black` | Верхний бордер `rgba(255,255,255,0.05)` |
 
 ## Орбитальная анимация Hero
 
-Три кружка-сателлита с изображениями вращаются вокруг центральной картинки (подход из [CodePen Solar System](https://codepen.io/AliceRez/pen/LYpwOzK)):
-
-### Архитектура анимации
-
-- Каждая орбита — круглый `div` (`.hero-orbit-ring`), центрированный в контейнере 432x432px
-- Орбита вращается через CSS `@keyframes hero-orbit-spin` (0° → 360°)
-- Сателлит расположен на левом краю орбиты (`top: 50% - size/2, left: -size/2`)
-- Изображение внутри контр-вращается (`.hero-orbit-img`, `hero-orbit-counter`) чтобы фото оставалось ровным
-- CSS-переменные `--orbit-duration` и `--orbit-delay` на каждом orbit ring управляют скоростью и стартовой позицией
+Три кружка-сателлита с изображениями вращаются вокруг центральной картинки:
 
 ### Параметры орбит
 
@@ -111,41 +108,39 @@
 | 2 | 440px | 128px (Container5) | 35s | ~237° (`-23s`) |
 | 3 | 436px | 112px (Container6) | 42s | ~120° (`-14s`) |
 
-### Изменённые компоненты
+## Стеклянные эффекты (Glass)
 
-- `Container` в `Site.tsx` — обёрнуты Container4/5/6 в orbit ring divs
-- `Container4/5/6` — убрано статичное позиционирование, заменено на orbit-edge позиционирование
-- `Container3` — добавлен `z-10` (центральное фото всегда впереди сателлитов)
-- Сателлиты: убрана Figma-обёртка с `overflow-clip p-[1.6px] flex-col`, заменена на `overflow-hidden` с прямым `<img>`
-- `InteractiveSite.tsx` — добавлены CSS `@keyframes` и классы `.hero-orbit-ring`, `.hero-orbit-img`
+| Элемент | Blur | Фон |
+|---------|------|-----|
+| Header | `blur(16px)` | `rgba(7,7,7,0.5)` |
+| "3+" (Container10) | `blur(4px)` | `rgba(0,0,0,0.07)` |
+| "Гарантия" (Container60) | `blur(4px)` | `rgba(0,0,0,0.07)` |
 
 ## Известные проблемы
 
 - `App.tsx` рендерит `InteractiveSite` (Figma-обёртка), а не Modern-компоненты
 - Legacy-компоненты (About.tsx, Contact.tsx и др.) не удалены
 - В `InteractiveSite.tsx` и `Site.tsx` по-прежнему хардкод-цвета (вне scope текущей задачи)
-- `Hero.tsx` (Modern-компонент) содержит альтернативную реализацию с orbit animation на Framer Motion, но не подключён
+- `Hero.tsx` (Modern-компонент) содержит альтернативную реализацию с orbit animation, но не подключён
 
 ## Последняя сессия
 
 **Дата:** 2026-02-23
 **Что сделано:**
-- Реализована орбитальная анимация кружков-сателлитов в Hero-блоке:
-  - Container4/5/6 обёрнуты в вращающиеся orbit ring divs
-  - CSS `@keyframes hero-orbit-spin` / `hero-orbit-counter` в InteractiveSite.tsx
-  - CSS-переменные `--orbit-duration` и `--orbit-delay` для управления скоростью и стартом
-  - Разные стартовые позиции через отрицательный `animation-delay` (`-7s`, `-23s`, `-14s`)
-- Исправлено обрезание кружков:
-  - `overflow-clip` → `overflow-hidden` + прямой `<img>` в Container4/5/6
-  - Убрана Figma-обёртка `flex-col items-start p-[1.6px]` — изображения теперь заполняют весь круг
-  - Центральная картинка (Container3): убран `p-[4px]`, `<img>` заполняет весь круг 304px
-- Центральная картинка (Container3) всегда впереди: добавлен `z-10`
-- App.tsx: временно добавлен и убран `<Hero />` при тестировании
+- Полноширинные фоны для Header (`rgba(7,7,7,0.5)` + glass blur), HeroBlock (`#161616`), Footer (`black`)
+- Glass-эффект на элементе "3+" (Container10) — `blur(4px)`, `rgba(0,0,0,0.07)`
+- Glass-эффект на блоке "Гарантия" (Container60) — центрирован, текст в одну строку
+- "Философия" (Frame7) — заголовок по центру, z-[1] на контенте
+- "Индивидуальный подход к каждому клиенту" — flex-растяжение, whitespace-nowrap
+- Карточки "Истории успеха":
+  - Плашки с кг выровнены на одну высоту (`top-[227.2px]`)
+  - Наложение профессии на имя исправлено → flex-col без абсолютного позиционирования
+- Футер: закомментированы "Услуги" и "О специалисте", контакты на первом столбце
+- `overflow-x-clip` на InteractiveSite (предотвращает горизонтальный скролл)
+- Адаптивный padding: `px-5` + `max-w-[1240px]` на корневом Site
 
 **Изменённые файлы:**
-- `src/imports/Site.tsx` — Container, Container3, Container4, Container5, Container6
-- `src/app/components/InteractiveSite.tsx` — CSS keyframes и orbit классы
-- `src/app/App.tsx` — откачен к `<InteractiveSite />`
-- `src/app/components/Hero.tsx` — добавлена альтернативная реализация с orbit (не подключена)
+- `src/imports/Site.tsx` — Header, HeroBlock, Frame7, Container10, Container60, Container61, Paragraph11, Text1, Container32/37/42 (карточки), Container67 (футер контакты), Container63 (закомментированы), Footer, Site
+- `src/app/components/InteractiveSite.tsx` — `overflow-x-clip` на motion.div
 
-**Следующий шаг:** Подключить Modern-компоненты в `App.tsx`, реализовать адаптивную вёрстку.
+**Следующий шаг:** Продолжить адаптивную вёрстку (медиа-запросы для средних и малых экранов).

@@ -65,6 +65,7 @@ SVG-логотип «ELENA».
 - CSS `@keyframes hero-orbit-spin` / `hero-orbit-counter` — орбитальная анимация Hero
 - Классы `.hero-orbit-ring` и `.hero-orbit-img` — управляются через CSS-переменные `--orbit-duration`, `--orbit-delay`
 - Logo Glass-эффект: `.logo-glass` с `backdrop-filter`
+- `overflow-x-clip` на корневом `motion.div` — предотвращает горизонтальный скролл от `w-screen` элементов
 
 ## Legacy-компоненты
 

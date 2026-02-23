@@ -1509,7 +1509,7 @@ function Footer() {
 
 export default function Site() {
   return (
-    <div className="bg-[#0a0a0a] content-stretch flex flex-col gap-[140px] items-center relative w-full max-w-[1200px] mx-auto" data-name="Site">
+    <div className="bg-[#0a0a0a] content-stretch flex flex-col gap-[140px] items-center relative w-full max-w-[1240px] mx-auto px-5" data-name="Site">
       <HeroBlock />
       <Frame7 />
       <Consultation />
