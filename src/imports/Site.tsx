@@ -284,8 +284,9 @@ function Frame2() {
 function Frame3() {
   return (
     <div className="content-stretch flex flex-col gap-[83px] items-start relative shrink-0 w-full z-[1]">
-      <div className="bg-[rgba(7,7,7,0.9)] h-[100px] relative shrink-0 w-full" data-name="Header">
-        <div className="flex flex-row items-center size-full">
+      <div className="h-[100px] relative shrink-0 w-full" data-name="Header">
+        <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[rgba(7,7,7,0.5)]" style={{ backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }} />
+        <div className="flex flex-row items-center size-full relative z-[1]">
           <div className="content-stretch flex items-center justify-between relative size-full">
             <Logo className="content-stretch flex flex-col items-start relative shrink-0" />
             <ListMenu />
@@ -309,6 +310,7 @@ function Frame4() {
 function HeroBlock() {
   return (
     <div className="content-stretch flex flex-col isolate items-start pb-[706px] relative shrink-0 w-full" data-name="Hero block">
+      <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[#161616]" />
       <Frame4 />
       <div className="h-[730px] mb-[-706px] opacity-5 shrink-0 w-full z-[1]" style={{ backgroundImage: "url(\'data:image/svg+xml;utf8,<svg viewBox=\\'0 0 1440 730\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0 -70.532 -84.143 0 720 365)\\'><stop stop-color=\\'rgba(255,255,255,1)\\' offset=\\'0.00082891\\'/><stop stop-color=\\'rgba(191,191,191,0.75)\\' offset=\\'0.00062168\\'/><stop stop-color=\\'rgba(128,128,128,0.5)\\' offset=\\'0.00041446\\'/><stop stop-color=\\'rgba(64,64,64,0.25)\\' offset=\\'0.00020723\\'/><stop stop-color=\\'rgba(0,0,0,0)\\' offset=\\'0\\'/></radialGradient></defs></svg>\')" }} />
     </div>
@@ -583,7 +585,7 @@ function Frame7() {
       <div className="absolute inset-0 pointer-events-none">
         <GradientContainer />
       </div>
-      <div className="content-stretch flex flex-col gap-[32px] items-center relative size-full">
+      <div className="content-stretch flex flex-col gap-[32px] items-center relative size-full z-[1]">
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[#00d492] text-[12px] text-center tracking-[3.6px] uppercase">Философия</p>
         <Block />
       </div>
@@ -1231,14 +1233,14 @@ function Heading() {
 function Paragraph11() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[20px] left-0 not-italic text-[14px] text-[rgba(255,255,255,0.9)] top-[-0.2px]">Результат через 2 недели или вернем деньги</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic text-[14px] text-[rgba(255,255,255,0.9)] whitespace-nowrap">Результат через 2 недели или вернем деньги</p>
     </div>
   );
 }
 
 function Container61() {
   return (
-    <div className="h-[56px] relative shrink-0 w-[290.15px]" data-name="Container">
+    <div className="relative shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[8px] items-start relative size-full">
         <Heading />
         <Paragraph11 />
@@ -1249,7 +1251,7 @@ function Container61() {
 
 function Container60() {
   return (
-    <div className="absolute bg-[rgba(255,255,255,0.17)] content-stretch flex gap-[16px] items-center left-[112px] p-[16px] top-[654.99px] w-[395px]" data-name="Container">
+    <div className="absolute bg-[rgba(0,0,0,0.07)] content-stretch flex gap-[16px] items-center left-1/2 -translate-x-1/2 p-[16px] top-[654.99px]" data-name="Container" style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
       <Icon11 />
       <Container61 />
     </div>
@@ -1463,7 +1465,7 @@ function List2() {
 
 function Container67() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[24px] h-[123.988px] items-start left-[868.8px] top-0 w-[241.6px]" data-name="Container">
+    <div className="absolute content-stretch flex flex-col gap-[24px] h-[123.988px] items-start left-[289.6px] top-0 w-[241.6px]" data-name="Container">
       <Heading3 />
       <List2 />
     </div>
@@ -1474,8 +1476,8 @@ function Container63() {
   return (
     <div className="h-[123.988px] relative shrink-0 w-full" data-name="Container">
       <Container64 />
-      <Container65 />
-      <Container66 />
+      {/* <Container65 /> */}
+      {/* <Container66 /> */}
       <Container67 />
     </div>
   );
@@ -1549,9 +1551,12 @@ function Container62() {
 
 function Footer() {
   return (
-    <div className="bg-black content-stretch flex flex-col h-[350px] items-start pt-[64.8px] relative shrink-0 w-full" data-name="Footer">
-      <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.05)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
-      <Container62 />
+    <div className="content-stretch flex flex-col h-[350px] items-start pt-[64.8px] relative shrink-0 w-full" data-name="Footer">
+      <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-black" />
+      <div aria-hidden="true" className="absolute left-1/2 -translate-x-1/2 w-screen border-[rgba(255,255,255,0.05)] border-solid border-t-[0.8px] inset-y-0 pointer-events-none" />
+      <div className="relative z-[1] w-full">
+        <Container62 />
+      </div>
     </div>
   );
 }
