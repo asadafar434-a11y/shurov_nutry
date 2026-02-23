@@ -1,3 +1,4 @@
+import { useState } from "react";
 import svgPaths from "./svg-rbnoezal0z";
 import imgImageHealthyFood from "@/assets/c6321bc658df8915369191499ea66641bd0a1058.png";
 import imgImage from "@/assets/a8eea92051d14e6a7c46659a265d548f3f638cea.png";
@@ -8,6 +9,7 @@ import imgImage4 from "@/assets/ca27e31ef2c2e6763717010455537962ccdd0fe8.png";
 import imgImage5 from "@/assets/a033bced262d0ab077d480dba17be62b0fcbec0b.png";
 import Logo from "./Logo";
 import GradientContainer from "./Container";
+import { Sheet, SheetContent, SheetTitle } from "@/app/components/ui/sheet";
 
 function ListMenu() {
   return (
@@ -281,7 +283,26 @@ function Frame2() {
   );
 }
 
+function BurgerButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className="relative rounded-[6px] shrink-0 size-[36px] md:hidden"
+      aria-label="Открыть меню"
+    >
+      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
+      <div className="content-stretch flex items-center justify-center relative size-full">
+        <svg className="size-[16px]" fill="none" viewBox="0 0 16 16">
+          <path d="M2 4h12M2 8h12M2 12h12" stroke="white" strokeOpacity="0.6" strokeWidth="1.33" strokeLinecap="round" />
+        </svg>
+      </div>
+    </button>
+  );
+}
+
 function Frame3() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="content-stretch flex flex-col gap-[83px] items-start relative shrink-0 w-full z-[1]">
       <div className="h-[100px] relative shrink-0 w-full" data-name="Header">
@@ -289,11 +310,33 @@ function Frame3() {
         <div className="flex flex-row items-center size-full relative z-[1]">
           <div className="content-stretch flex items-center justify-between relative size-full">
             <Logo className="content-stretch flex flex-col items-start relative shrink-0" />
-            <ListMenu />
-            <Contacts />
+            <div className="hidden md:flex">
+              <ListMenu />
+            </div>
+            <div className="hidden md:flex">
+              <Contacts />
+            </div>
+            <BurgerButton onClick={() => setMenuOpen(true)} />
           </div>
         </div>
       </div>
+
+      <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+        <SheetContent side="right" className="bg-[#0a0a0a] border-[rgba(255,255,255,0.1)] p-0 text-white">
+          <SheetTitle className="sr-only">Меню</SheetTitle>
+          <div className="flex flex-col gap-[32px] p-[32px] pt-[64px]">
+            <nav className="flex flex-col gap-[24px]">
+              <p className="font-['Inter:Medium',sans-serif] font-medium leading-[20px] text-[14px] text-[rgba(255,255,255,0.7)] tracking-[0.7px] uppercase cursor-pointer" onClick={() => setMenuOpen(false)}>О специалисте</p>
+              <p className="font-['Inter:Medium',sans-serif] font-medium leading-[20px] text-[14px] text-[rgba(255,255,255,0.7)] tracking-[0.7px] uppercase cursor-pointer" onClick={() => setMenuOpen(false)}>Результаты</p>
+              <p className="font-['Inter:Medium',sans-serif] font-medium leading-[20px] text-[14px] text-[rgba(255,255,255,0.7)] tracking-[0.7px] uppercase cursor-pointer" onClick={() => setMenuOpen(false)}>Блог</p>
+            </nav>
+            <div className="border-t border-[rgba(255,255,255,0.1)] pt-[24px]">
+              <Contacts />
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
+
       <Frame2 />
     </div>
   );
