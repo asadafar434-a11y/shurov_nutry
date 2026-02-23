@@ -474,10 +474,8 @@ function Container25() {
 
 function Paragraph1() {
   return (
-    <div className="h-[28px] relative shrink-0 w-[329.087px]" data-name="Paragraph">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-[rgba(255,255,255,0.6)] top-[1.8px]">Индивидуальный подход к каждому клиенту</p>
-      </div>
+    <div className="h-[28px] relative flex-1 min-w-0" data-name="Paragraph">
+      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[16px] text-[rgba(255,255,255,0.6)] whitespace-nowrap mt-[1.8px]">Индивидуальный подход к каждому клиенту</p>
     </div>
   );
 }
@@ -497,10 +495,8 @@ function Container27() {
 
 function Paragraph2() {
   return (
-    <div className="h-[28px] relative shrink-0 w-[307.513px]" data-name="Paragraph">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-[rgba(255,255,255,0.6)] top-[1.8px]">Научно обоснованные методики питания</p>
-      </div>
+    <div className="h-[28px] relative flex-1 min-w-0" data-name="Paragraph">
+      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[16px] text-[rgba(255,255,255,0.6)] whitespace-nowrap mt-[1.8px]">Научно обоснованные методики питания</p>
     </div>
   );
 }
@@ -520,10 +516,8 @@ function Container29() {
 
 function Paragraph3() {
   return (
-    <div className="h-[28px] relative shrink-0 w-[284.5px]" data-name="Paragraph">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-[rgba(255,255,255,0.6)] top-[1.8px]">Постоянная поддержка на пути к цели</p>
-      </div>
+    <div className="h-[28px] relative flex-1 min-w-0" data-name="Paragraph">
+      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[16px] text-[rgba(255,255,255,0.6)] whitespace-nowrap mt-[1.8px]">Постоянная поддержка на пути к цели</p>
     </div>
   );
 }
@@ -589,7 +583,7 @@ function Frame7() {
       <div className="absolute inset-0 pointer-events-none">
         <GradientContainer />
       </div>
-      <div className="content-stretch flex flex-col gap-[32px] items-start relative size-full">
+      <div className="content-stretch flex flex-col gap-[32px] items-center relative size-full">
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[#00d492] text-[12px] text-center tracking-[3.6px] uppercase">Философия</p>
         <Block />
       </div>
