@@ -687,29 +687,11 @@ function Image4() {
   );
 }
 
-function Container33() {
-  return (
-    <div className="absolute h-[20px] left-0 top-0 w-[123.45px]" data-name="Container">
-      <p className="absolute font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] left-0 text-[14px] text-white top-[-0.2px] tracking-[0.35px] uppercase">Анна Соколова</p>
-    </div>
-  );
-}
-
-function Container34() {
-  return (
-    <div className="absolute content-stretch flex h-[15.988px] items-start left-0 top-[20px] w-[123.45px]" data-name="Container">
-      <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Маркетолог</p>
-    </div>
-  );
-}
-
 function Container32() {
   return (
-    <div className="h-[35.987px] relative shrink-0 w-[123.45px]" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <Container33 />
-        <Container34 />
-      </div>
+    <div className="flex flex-col justify-center shrink-0" data-name="Container">
+      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">Анна Соколова</p>
+      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">Маркетолог</p>
     </div>
   );
 }
@@ -759,7 +741,7 @@ function Paragraph5() {
 
 function Text1() {
   return (
-    <div className="absolute border-[0.8px] border-[rgba(0,212,146,0.5)] border-solid h-[36px] left-[32.8px] top-[201.2px] w-[73.85px]" data-name="Text">
+    <div className="absolute border-[0.8px] border-[rgba(0,212,146,0.5)] border-solid h-[36px] left-[32.8px] top-[227.2px] w-[73.85px]" data-name="Text">
       <p className="absolute font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] left-[16px] text-[#00d492] text-[14px] top-[7px] tracking-[0.7px] uppercase">+8 кг</p>
     </div>
   );
@@ -773,36 +755,18 @@ function Image5() {
   );
 }
 
-function Container38() {
-  return (
-    <div className="h-[20px] relative shrink-0 w-full" data-name="Container">
-      <p className="absolute font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] left-0 text-[14px] text-white top-[-0.2px] tracking-[0.35px] uppercase">Дмитрий Петров</p>
-    </div>
-  );
-}
-
-function Container39() {
-  return (
-    <div className="content-stretch flex h-[15.988px] items-start relative shrink-0 w-full" data-name="Container">
-      <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">IT-специалист</p>
-    </div>
-  );
-}
-
 function Container37() {
   return (
-    <div className="h-[35.987px] relative shrink-0 w-[132.5px]" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
-        <Container38 />
-        <Container39 />
-      </div>
+    <div className="flex flex-col justify-center shrink-0" data-name="Container">
+      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">Дмитрий Петров</p>
+      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">IT-специалист</p>
     </div>
   );
 }
 
 function Container36() {
   return (
-    <div className="absolute content-stretch flex gap-[16px] h-[72.8px] items-center left-[32.67px] pt-[0.8px] top-[289px] w-[288.538px]" data-name="Container">
+    <div className="absolute content-stretch flex gap-[16px] h-[72.8px] items-center left-[32.8px] pt-[0.8px] top-[288.8px] w-[288.525px]" data-name="Container">
       <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
       <Image5 />
       <Container37 />
@@ -859,29 +823,11 @@ function Image6() {
   );
 }
 
-function Container43() {
-  return (
-    <div className="absolute h-[20px] left-0 top-0 w-[126.3px]" data-name="Container">
-      <p className="absolute font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] left-0 text-[14px] text-white top-[-0.2px] tracking-[0.35px] uppercase">Мария Иванова</p>
-    </div>
-  );
-}
-
-function Container44() {
-  return (
-    <div className="absolute content-stretch flex h-[15.988px] items-start left-0 top-[20px] w-[126.3px]" data-name="Container">
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">Предприниматель</p>
-    </div>
-  );
-}
-
 function Container42() {
   return (
-    <div className="h-[35.987px] relative shrink-0 w-[126.3px]" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <Container43 />
-        <Container44 />
-      </div>
+    <div className="flex flex-col justify-center shrink-0" data-name="Container">
+      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">Мария Иванова</p>
+      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">Предприниматель</p>
     </div>
   );
 }
