@@ -115,8 +115,8 @@ function Contacts() {
 
 function Frame5() {
   return (
-    <div className="content-stretch flex flex-col items-start relative shrink-0 text-center">
-      <p className="bg-clip-text font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[46px]" style={{ backgroundImage: "linear-gradient(97.8564deg, rgb(0, 212, 146) 0.5699%, rgb(0, 110, 76) 70.134%)", WebkitTextFillColor: "transparent" }}>
+    <div className="content-stretch flex flex-col items-start relative shrink-0 text-left">
+      <p className="bg-clip-text font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[28px] md:text-[46px]" style={{ backgroundImage: "linear-gradient(97.8564deg, rgb(0, 212, 146) 0.5699%, rgb(0, 110, 76) 70.134%)", WebkitTextFillColor: "transparent" }}>
         НУТРИЦИОЛОГИЯ - ЭТО ПРОСТО!
       </p>
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic relative shrink-0 text-[12px] text-[rgba(0,186,128,0.53)] tracking-[4.2px] uppercase">Art of Nutrition</p>
@@ -124,29 +124,17 @@ function Frame5() {
   );
 }
 
-function Frame() {
+function HeroDescription() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0">
-      <Frame5 />
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[14px] text-[rgba(255,255,255,0.6)] text-justify w-[488px] whitespace-pre-wrap">Индивидуальные программы питания, разработанные с заботой о вашем здоровье, энергии и долгосрочном благополучии. Мы учитываем ваши цели, образ жизни, состояние организма и вкусовые предпочтения. Это продуманная стратегия, которая помогает улучшить самочувствие, поддерживать форму и чувствовать себя уверенно каждый день.</p>
-    </div>
+    <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[14px] text-[rgba(255,255,255,0.6)] text-justify max-w-[488px] w-full whitespace-pre-wrap">Индивидуальные программы питания, разработанные с заботой о вашем здоровье, энергии и долгосрочном благополучии. Мы учитываем ваши цели, образ жизни, состояние организма и вкусовые предпочтения. Это продуманная стратегия, которая помогает улучшить самочувствие, поддерживать форму и чувствовать себя уверенно каждый день.</p>
   );
 }
 
 function Button() {
   return (
-    <div className="h-[54px] relative shrink-0 w-[240px]" data-name="Button">
+    <div className="h-[54px] relative shrink-0 w-full sm:w-[240px]" data-name="Button">
       <div aria-hidden="true" className="absolute border-[0.8px] border-solid border-white inset-0 pointer-events-none" />
-      <p className="-translate-x-1/2 absolute font-['Manrope:Medium',sans-serif] font-medium leading-[20px] left-[120px] text-[14px] text-center text-white top-[17px] tracking-[0.7px] uppercase">Записаться</p>
-    </div>
-  );
-}
-
-function Content() {
-  return (
-    <div className="content-stretch flex flex-col gap-[48px] h-[462px] items-start justify-center relative shrink-0" data-name="Content">
-      <Frame />
-      <Button />
+      <p className="absolute font-['Manrope:Medium',sans-serif] font-medium leading-[20px] left-1/2 -translate-x-1/2 text-[14px] text-center text-white top-[17px] tracking-[0.7px] uppercase">Записаться</p>
     </div>
   );
 }
@@ -256,9 +244,21 @@ function Container() {
 
 function Frame1() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <Content />
-      <Container />
+    <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-y-[32px] lg:gap-x-[32px] lg:gap-y-[16px] items-start relative shrink-0 w-full">
+      <div className="lg:col-start-1 lg:row-start-1 lg:self-end">
+        <Frame5 />
+      </div>
+      <div className="justify-self-center lg:col-start-2 lg:row-start-1 lg:row-span-4 lg:self-center w-[260px] h-[260px] md:w-[320px] md:h-[320px] lg:w-[432px] lg:h-[432px] my-[24px] md:my-[32px] lg:my-0">
+        <div className="w-[432px] h-[432px] origin-top-left scale-[0.6] md:scale-[0.74] lg:scale-100">
+          <Container />
+        </div>
+      </div>
+      <div className="lg:col-start-1 lg:row-start-2">
+        <HeroDescription />
+      </div>
+      <div className="lg:col-start-1 lg:row-start-3 lg:pt-[32px]">
+        <Button />
+      </div>
     </div>
   );
 }
@@ -304,7 +304,7 @@ function Frame3() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="content-stretch flex flex-col gap-[83px] items-start relative shrink-0 w-full z-[1]">
+    <div className="content-stretch flex flex-col gap-[24px] sm:gap-[83px] items-start relative shrink-0 w-full z-[1]">
       <div className="h-[100px] relative shrink-0 w-full" data-name="Header">
         <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[rgba(7,7,7,0.5)]" style={{ backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }} />
         <div className="flex flex-row items-center size-full relative z-[1]">
@@ -361,53 +361,29 @@ function HeroBlock() {
 }
 
 function Container8() {
-  return <div className="absolute border-[0.8px] border-[rgba(255,255,255,0.05)] border-solid h-[732px] left-[-16px] rounded-[10px] top-[-16px] w-[547.2px]" data-name="Container" />;
-}
-
-function Image3() {
-  return (
-    <div className="h-[700px] relative rounded-[10px] shrink-0 w-full" data-name="Image (Елена Озер)">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[10px] size-full" src={imgImage} />
-    </div>
-  );
+  return <div className="hidden lg:block absolute border-[0.8px] border-[rgba(255,255,255,0.05)] border-solid h-[732px] left-[-16px] rounded-[10px] top-[-16px] w-[547.2px]" data-name="Container" />;
 }
 
 function Container9() {
   return (
-    <div className="absolute content-stretch flex flex-col h-[700px] items-start left-0 overflow-clip top-0 w-[515.2px]" data-name="Container">
-      <Image3 />
-    </div>
-  );
-}
-
-function Container11() {
-  return (
-    <div className="h-[48px] relative shrink-0 w-full" data-name="Container">
-      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[48px] left-[17px] text-[48px] text-white top-0">3+</p>
-    </div>
-  );
-}
-
-function Container12() {
-  return (
-    <div className="content-stretch flex h-[16px] items-start justify-center opacity-90 relative shrink-0 w-[89px]" data-name="Container">
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] relative shrink-0 text-[12px] text-center text-white tracking-[0.6px] uppercase w-[89.162px] whitespace-pre-wrap">Лет опыта</p>
+    <div className="absolute inset-0 overflow-clip rounded-[10px]" data-name="Container">
+      <img alt="" className="absolute inset-0 max-w-none object-cover object-[center_30%] pointer-events-none rounded-[10px] size-full" src={imgImage} />
     </div>
   );
 }
 
 function Container10() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0.07)] content-stretch flex flex-col gap-[8px] h-[135.988px] items-start left-[338px] pt-[32px] px-[32px] top-[24px] w-[153.163px]" data-name="Container" style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
-      <Container11 />
-      <Container12 />
+    <div className="absolute bg-[rgba(0,0,0,0.07)] flex flex-col gap-[4px] md:gap-[8px] items-center right-0 top-[24px] pt-[16px] px-[16px] pb-[16px] md:pt-[32px] md:px-[32px] md:pb-[24px] w-[100px] md:w-[153.163px]" data-name="Container" style={{ backdropFilter: 'blur(2px)', WebkitBackdropFilter: 'blur(2px)' }}>
+      <p className="font-['Manrope:Bold',sans-serif] font-bold text-[32px] md:text-[48px] leading-[1] text-white">3+</p>
+      <p className="font-['Manrope:Regular',sans-serif] font-normal text-[10px] md:text-[12px] leading-[16px] text-center text-white tracking-[0.6px] uppercase opacity-90">Лет опыта</p>
     </div>
   );
 }
 
 function Container7() {
   return (
-    <div className="h-[700px] relative rounded-[10px] shrink-0 w-[515.2px]" data-name="Container">
+    <div className="relative rounded-[10px] shrink-0 w-full h-[400px] md:h-[500px] lg:w-[515.2px] lg:h-[700px]" data-name="Container">
       <Container8 />
       <Container9 />
       <Container10 />
@@ -415,220 +391,101 @@ function Container7() {
   );
 }
 
-function Container15() {
+function StatItem({ value, label }: { value: string; label: string }) {
   return (
-    <div className="h-[36px] relative shrink-0 w-full" data-name="Container">
-      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[36px] left-0 text-[30px] text-white top-[-1.6px]">500+</p>
-    </div>
-  );
-}
-
-function Container16() {
-  return (
-    <div className="content-stretch flex h-[15.988px] items-start relative shrink-0 w-full" data-name="Container">
-      <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Клиентов</p>
-    </div>
-  );
-}
-
-function Container14() {
-  return (
-    <div className="absolute content-stretch flex flex-col gap-[8px] h-[59.987px] items-start left-0 top-0 w-[150.4px]" data-name="Container">
-      <Container15 />
-      <Container16 />
-    </div>
-  );
-}
-
-function Container18() {
-  return (
-    <div className="h-[36px] relative shrink-0 w-full" data-name="Container">
-      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[36px] left-0 text-[30px] text-white top-[-1.6px]">98%</p>
-    </div>
-  );
-}
-
-function Container19() {
-  return (
-    <div className="content-stretch flex h-[15.988px] items-start relative shrink-0 w-full" data-name="Container">
-      <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Успеха</p>
-    </div>
-  );
-}
-
-function Container17() {
-  return (
-    <div className="absolute content-stretch flex flex-col gap-[8px] h-[59.987px] items-start left-[182.4px] top-0 w-[150.4px]" data-name="Container">
-      <Container18 />
-      <Container19 />
-    </div>
-  );
-}
-
-function Container21() {
-  return (
-    <div className="h-[36px] relative shrink-0 w-full" data-name="Container">
-      <p className="absolute font-['Manrope:Bold',sans-serif] font-bold leading-[36px] left-0 text-[30px] text-white top-[-1.6px]">24/7</p>
-    </div>
-  );
-}
-
-function Container22() {
-  return (
-    <div className="content-stretch flex h-[15.988px] items-start relative shrink-0 w-full" data-name="Container">
-      <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Поддержка</p>
-    </div>
-  );
-}
-
-function Container20() {
-  return (
-    <div className="absolute content-stretch flex flex-col gap-[8px] h-[59.987px] items-start left-[364.8px] top-0 w-[150.4px]" data-name="Container">
-      <Container21 />
-      <Container22 />
+    <div className="flex-1 flex flex-col gap-[8px] items-center text-center">
+      <p className="font-['Manrope:Bold',sans-serif] font-bold text-[24px] md:text-[30px] lg:text-[36px] leading-[1.2] text-white">{value}</p>
+      <p className="font-['Manrope:Regular',sans-serif] font-normal text-[11px] md:text-[12px] lg:text-[14px] leading-[16px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">{label}</p>
     </div>
   );
 }
 
 function Container13() {
   return (
-    <div className="h-[108.787px] relative shrink-0 w-[515.2px]" data-name="Container">
-      <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.05)] border-b-[0.8px] border-solid inset-0 pointer-events-none" />
-      <Container14 />
-      <Container17 />
-      <Container20 />
+    <div className="flex justify-between items-start relative shrink-0 w-full pt-[16px] pb-[16px] border-b border-[rgba(255,255,255,0.05)]" data-name="Container">
+      <StatItem value="500+" label="Клиентов" />
+      <StatItem value="98%" label="Успеха" />
+      <StatItem value="24/7" label="Поддержка" />
     </div>
   );
 }
 
-function Content1() {
+function PhilHeading() {
   return (
-    <div className="content-stretch flex flex-[1_0_0] flex-col gap-[32px] items-start min-h-px min-w-px relative" data-name="Content">
-      <p className="bg-clip-text font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] min-w-full relative shrink-0 text-[48px] w-[min-content] whitespace-pre-wrap" style={{ backgroundImage: "linear-gradient(95.1427deg, rgb(0, 212, 146) 0.5699%, rgb(0, 110, 76) 70.134%)", WebkitTextFillColor: "transparent" }}>
-        ПУТЬ К ЗДОРОВЬЮ
-      </p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[29.25px] not-italic relative shrink-0 text-[18px] text-[rgba(255,255,255,0.5)] w-[515px] whitespace-pre-wrap">Более 10 лет я помогаю людям обрести гармонию через персонализированные программы питания. Каждая программа создается индивидуально с учетом вашего образа жизни и целей.</p>
-      <Container13 />
-    </div>
+    <p className="bg-clip-text font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[28px] md:text-[48px] w-full whitespace-pre-wrap" style={{ backgroundImage: "linear-gradient(95.1427deg, rgb(0, 212, 146) 0.5699%, rgb(0, 110, 76) 70.134%)", WebkitTextFillColor: "transparent" }}>
+      ПУТЬ К ЗДОРОВЬЮ
+    </p>
   );
 }
 
-function Container25() {
-  return <div className="bg-[#00d492] h-[32px] shrink-0 w-px" data-name="Container" />;
-}
-
-function Paragraph1() {
+function PhilDescription() {
   return (
-    <div className="h-[28px] relative flex-1 min-w-0" data-name="Paragraph">
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[16px] text-[rgba(255,255,255,0.6)] whitespace-nowrap mt-[1.8px]">Индивидуальный подход к каждому клиенту</p>
-    </div>
+    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[29.25px] not-italic relative shrink-0 text-[16px] md:text-[18px] text-[rgba(255,255,255,0.5)] max-w-[515px] w-full whitespace-pre-wrap">Более 10 лет я помогаю людям обрести гармонию через персонализированные программы питания. Каждая программа создается индивидуально с учетом вашего образа жизни и целей.</p>
   );
 }
 
-function Container24() {
+function BulletItem({ text }: { text: string }) {
   return (
     <div className="content-stretch flex gap-[16px] h-[32px] items-start relative shrink-0 w-full" data-name="Container">
-      <Container25 />
-      <Paragraph1 />
-    </div>
-  );
-}
-
-function Container27() {
-  return <div className="bg-[#00d492] h-[32px] shrink-0 w-px" data-name="Container" />;
-}
-
-function Paragraph2() {
-  return (
-    <div className="h-[28px] relative flex-1 min-w-0" data-name="Paragraph">
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[16px] text-[rgba(255,255,255,0.6)] whitespace-nowrap mt-[1.8px]">Научно обоснованные методики питания</p>
-    </div>
-  );
-}
-
-function Container26() {
-  return (
-    <div className="content-stretch flex gap-[16px] h-[32px] items-start relative shrink-0 w-full" data-name="Container">
-      <Container27 />
-      <Paragraph2 />
-    </div>
-  );
-}
-
-function Container29() {
-  return <div className="bg-[#00d492] h-[32px] shrink-0 w-px" data-name="Container" />;
-}
-
-function Paragraph3() {
-  return (
-    <div className="h-[28px] relative flex-1 min-w-0" data-name="Paragraph">
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[16px] text-[rgba(255,255,255,0.6)] whitespace-nowrap mt-[1.8px]">Постоянная поддержка на пути к цели</p>
-    </div>
-  );
-}
-
-function Container28() {
-  return (
-    <div className="content-stretch flex gap-[16px] h-[32px] items-start relative shrink-0 w-full" data-name="Container">
-      <Container29 />
-      <Paragraph3 />
+      <div className="bg-[#00d492] h-[32px] shrink-0 w-px" />
+      <div className="h-[28px] relative flex-1 min-w-0" data-name="Paragraph">
+        <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[16px] text-[rgba(255,255,255,0.6)] whitespace-nowrap mt-[1.8px]">{text}</p>
+      </div>
     </div>
   );
 }
 
 function Container23() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] h-[144px] items-start relative shrink-0 w-full" data-name="Container">
-      <Container24 />
-      <Container26 />
-      <Container28 />
+    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="Container">
+      <BulletItem text="Индивидуальный подход к каждому клиенту" />
+      <BulletItem text="Научно обоснованные методики питания" />
+      <BulletItem text="Постоянная поддержка на пути к цели" />
     </div>
   );
 }
 
 function Button1() {
   return (
-    <div className="h-[54px] relative shrink-0 w-[240px]" data-name="Button">
+    <div className="h-[54px] relative shrink-0 w-full sm:w-[240px]" data-name="Button">
       <div aria-hidden="true" className="absolute border-[0.8px] border-solid border-white inset-0 pointer-events-none" />
-      <p className="-translate-x-1/2 absolute font-['Inter:Medium',sans-serif] font-medium leading-[20px] left-[120.5px] not-italic text-[14px] text-center text-white top-[17px] tracking-[0.7px] uppercase">Узнать больше</p>
-    </div>
-  );
-}
-
-function Content2() {
-  return (
-    <div className="content-stretch flex flex-col h-[289px] items-start justify-between relative shrink-0 w-[515px]" data-name="Content">
-      <Container23 />
-      <Button1 />
-    </div>
-  );
-}
-
-function Frame6() {
-  return (
-    <div className="content-stretch flex flex-col h-[700px] items-end justify-between relative shrink-0">
-      <Content1 />
-      <Content2 />
+      <p className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[20px] left-1/2 -translate-x-1/2 not-italic text-[14px] text-center text-white top-[17px] tracking-[0.7px] uppercase">Узнать больше</p>
     </div>
   );
 }
 
 function Block() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Block 2">
-      <Container7 />
-      <Frame6 />
+    <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-[32px] items-start relative shrink-0 w-full" data-name="Block 2">
+      <div className="lg:col-start-2 lg:row-start-1">
+        <PhilHeading />
+      </div>
+      <div className="w-full lg:col-start-1 lg:row-start-1 lg:row-span-6 lg:self-center">
+        <Container7 />
+      </div>
+      <div className="lg:col-start-2 lg:row-start-3">
+        <Container13 />
+      </div>
+      <div className="lg:col-start-2 lg:row-start-2">
+        <PhilDescription />
+      </div>
+      <div className="lg:col-start-2 lg:row-start-4">
+        <Container23 />
+      </div>
+      <div className="lg:col-start-2 lg:row-start-5">
+        <Button1 />
+      </div>
     </div>
   );
 }
 
 function Frame7() {
   return (
-    <div className="h-[783px] relative shrink-0 w-full">
+    <div className="min-h-[783px] relative shrink-0 w-full py-[32px] lg:py-0 -mt-[100px] -mb-[100px]">
       <div className="absolute inset-0 pointer-events-none">
         <GradientContainer />
       </div>
-      <div className="content-stretch flex flex-col gap-[32px] items-center relative size-full z-[1]">
+      <div className="content-stretch flex flex-col gap-[32px] items-center relative w-full z-[1]">
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[#00d492] text-[12px] text-center tracking-[3.6px] uppercase">Философия</p>
         <Block />
       </div>
@@ -639,18 +496,18 @@ function Frame7() {
 function Frame8() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0 w-full">
-      <p className="bg-clip-text font-['Manrope:SemiBold',sans-serif] font-semibold leading-[0] relative shrink-0 text-[48px]" style={{ backgroundImage: "linear-gradient(97.71deg, rgb(0, 212, 146) 0.5699%, rgb(0, 110, 76) 70.134%)", WebkitTextFillColor: "transparent" }}>
+      <p className="bg-clip-text font-['Manrope:SemiBold',sans-serif] font-semibold leading-[1.2] relative shrink-0 text-[28px] md:text-[36px] lg:text-[48px] text-center" style={{ backgroundImage: "linear-gradient(97.71deg, rgb(0, 212, 146) 0.5699%, rgb(0, 110, 76) 70.134%)", WebkitTextFillColor: "transparent" }}>
         <span className="leading-[normal] text-white">Первая консультация</span>
         <span className="leading-[normal]">{` бесплатно`}</span>
       </p>
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative shrink-0 text-[16px] text-[rgba(255,255,255,0.5)] text-center w-[622px] whitespace-pre-wrap">Познакомимся, обсудим ваши цели и я предложу оптимальный план действий</p>
+      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative shrink-0 text-[14px] md:text-[16px] text-[rgba(255,255,255,0.5)] text-center w-full max-w-[622px] whitespace-pre-wrap">Познакомимся, обсудим ваши цели и я предложу оптимальный план действий</p>
     </div>
   );
 }
 
 function Icon3() {
   return (
-    <div className="absolute left-[167.53px] size-[16px] top-[19.2px]" data-name="Icon">
+    <div className="absolute left-[167.53px] size-[16px] top-[19.2px] hidden sm:block" data-name="Icon">
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
           <path d={svgPaths.p43eff00} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
@@ -662,9 +519,9 @@ function Icon3() {
 
 function Button2() {
   return (
-    <div className="h-[54px] relative shrink-0 w-[240px]" data-name="Button">
+    <div className="h-[54px] relative shrink-0 w-full sm:w-[240px]" data-name="Button">
       <div aria-hidden="true" className="absolute border-[0.8px] border-solid border-white inset-0 pointer-events-none" />
-      <p className="-translate-x-1/2 absolute font-['Inter:Medium',sans-serif] font-medium leading-[20px] left-[108.5px] not-italic text-[14px] text-center text-white top-[17px] tracking-[0.7px] uppercase">Записаться</p>
+      <p className="-translate-x-1/2 absolute font-['Inter:Medium',sans-serif] font-medium leading-[20px] left-1/2 not-italic text-[14px] text-center text-white top-[17px] tracking-[0.7px] uppercase">Записаться</p>
       <Icon3 />
     </div>
   );
@@ -682,234 +539,87 @@ function Consultation() {
 
 function Frame9() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-center justify-center py-[32px] relative shrink-0 w-[622px]">
+    <div className="content-stretch flex flex-col gap-[16px] items-center justify-center py-[32px] relative shrink-0 w-full max-w-[622px]">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[#00d492] text-[12px] tracking-[3.6px] uppercase">Отзывы</p>
-      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[48px] text-white">Истории успеха</p>
-      <div className="font-['Manrope:Regular',sans-serif] font-normal h-[23px] leading-[24px] relative shrink-0 text-[16px] text-[rgba(255,255,255,0.5)] text-center w-[280px] whitespace-pre-wrap">
-        <p className="mb-0">Реальные результы реальных людей</p>
-        <p>&nbsp;</p>
+      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[28px] md:text-[36px] lg:text-[48px] text-white">Истории успеха</p>
+      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative shrink-0 text-[14px] md:text-[16px] text-[rgba(255,255,255,0.5)] text-center">Реальные результы реальных людей</p>
+    </div>
+  );
+}
+
+function QuoteIcon({ className = '' }: { className?: string }) {
+  return (
+    <div className={`size-[32px] md:size-[40px] shrink-0 ${className}`}>
+      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 40 40">
+        <path d={svgPaths.p14a93580} stroke="var(--stroke-0, #00D492)" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.3" strokeWidth="3.33333" />
+        <path d={svgPaths.p29592b72} stroke="var(--stroke-0, #00D492)" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.3" strokeWidth="3.33333" />
+      </svg>
+    </div>
+  );
+}
+
+function ReviewCard({ quote, kg, name, profession, imgSrc }: { quote: string; kg: string; name: string; profession: string; imgSrc: string }) {
+  return (
+    <div className="bg-[rgba(255,255,255,0.05)] flex-[1_0_0] min-w-0 relative">
+      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none" />
+
+      {/* Mobile: horizontal layout */}
+      <div className="flex flex-row gap-[16px] p-[24px] md:p-[32px] lg:hidden relative">
+        <div className="flex flex-col items-center gap-[12px] shrink-0">
+          <div className="relative size-[48px] rounded-full overflow-hidden">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSrc} />
+          </div>
+          <div className="border-[0.8px] border-[rgba(0,212,146,0.5)] border-solid px-[12px] py-[6px]">
+            <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[#00d492] text-[13px] tracking-[0.7px] uppercase whitespace-nowrap">{kg}</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-[12px] flex-1 min-w-0">
+          <QuoteIcon />
+          <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[14px] md:text-[16px] text-[rgba(255,255,255,0.6)]">{quote}</p>
+          <div className="flex flex-col mt-auto pt-[12px] border-t border-[rgba(255,255,255,0.1)]">
+            <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">{name}</p>
+            <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">{profession}</p>
+          </div>
+        </div>
       </div>
-    </div>
-  );
-}
 
-function Icon4() {
-  return (
-    <div className="absolute left-[32.8px] size-[40px] top-[32.8px]" data-name="Icon">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 40 40">
-        <g id="Icon">
-          <path d={svgPaths.p14a93580} id="Vector" stroke="var(--stroke-0, #00D492)" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.3" strokeWidth="3.33333" />
-          <path d={svgPaths.p29592b72} id="Vector_2" stroke="var(--stroke-0, #00D492)" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.3" strokeWidth="3.33333" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Paragraph4() {
-  return (
-    <div className="absolute h-[104px] left-[32.8px] top-[96.8px] w-[288.525px]" data-name="Paragraph">
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[26px] left-0 text-[16px] text-[rgba(255,255,255,0.6)] top-[-2.4px] w-[282px] whitespace-pre-wrap">За 3 месяца работы с Еленой я не только похудела на 12 кг, но и полностью изменила свое отношение к еде.</p>
-    </div>
-  );
-}
-
-function Text() {
-  return (
-    <div className="absolute border-[0.8px] border-[rgba(0,212,146,0.5)] border-solid h-[36px] left-[32.8px] top-[227.2px] w-[76.1px]" data-name="Text">
-      <p className="absolute font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] left-[16px] text-[#00d492] text-[14px] top-[7px] tracking-[0.7px] uppercase">-12 кг</p>
-    </div>
-  );
-}
-
-function Image4() {
-  return (
-    <div className="relative shrink-0 size-[48px]" data-name="Image (Анна Соколова)">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
-    </div>
-  );
-}
-
-function Container32() {
-  return (
-    <div className="flex flex-col justify-center shrink-0" data-name="Container">
-      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">Анна Соколова</p>
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">Маркетолог</p>
-    </div>
-  );
-}
-
-function Container31() {
-  return (
-    <div className="absolute content-stretch flex gap-[16px] h-[72.8px] items-center left-[32.8px] pt-[0.8px] top-[288.8px] w-[288.525px]" data-name="Container">
-      <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
-      <Image4 />
-      <Container32 />
-    </div>
-  );
-}
-
-function Container30() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.05)] flex-[1_0_0] h-[394.4px] min-h-px min-w-px relative" data-name="Container">
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none" />
-      <Icon4 />
-      <Paragraph4 />
-      <Text />
-      <Container31 />
-    </div>
-  );
-}
-
-function Icon5() {
-  return (
-    <div className="absolute left-[32.8px] size-[40px] top-[32.8px]" data-name="Icon">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 40 40">
-        <g id="Icon">
-          <path d={svgPaths.p14a93580} id="Vector" stroke="var(--stroke-0, #00D492)" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.3" strokeWidth="3.33333" />
-          <path d={svgPaths.p29592b72} id="Vector_2" stroke="var(--stroke-0, #00D492)" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.3" strokeWidth="3.33333" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Paragraph5() {
-  return (
-    <div className="absolute h-[78px] left-[32.8px] top-[96.8px] w-[288.538px]" data-name="Paragraph">
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[26px] left-0 text-[16px] text-[rgba(255,255,255,0.6)] top-[-2.4px] w-[275px] whitespace-pre-wrap">Программа спортивного питания помогла мне набрать 8 кг мышечной массы.</p>
-    </div>
-  );
-}
-
-function Text1() {
-  return (
-    <div className="absolute border-[0.8px] border-[rgba(0,212,146,0.5)] border-solid h-[36px] left-[32.8px] top-[227.2px] w-[73.85px]" data-name="Text">
-      <p className="absolute font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] left-[16px] text-[#00d492] text-[14px] top-[7px] tracking-[0.7px] uppercase">+8 кг</p>
-    </div>
-  );
-}
-
-function Image5() {
-  return (
-    <div className="relative shrink-0 size-[48px]" data-name="Image (Дмитрий Петров)">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage4} />
-    </div>
-  );
-}
-
-function Container37() {
-  return (
-    <div className="flex flex-col justify-center shrink-0" data-name="Container">
-      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">Дмитрий Петров</p>
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">IT-специалист</p>
-    </div>
-  );
-}
-
-function Container36() {
-  return (
-    <div className="absolute content-stretch flex gap-[16px] h-[72.8px] items-center left-[32.8px] pt-[0.8px] top-[288.8px] w-[288.525px]" data-name="Container">
-      <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
-      <Image5 />
-      <Container37 />
-    </div>
-  );
-}
-
-function Container35() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.05)] flex-[1_0_0] h-[394.4px] min-h-px min-w-px relative" data-name="Container">
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none" />
-      <Icon5 />
-      <Paragraph5 />
-      <Text1 />
-      <Container36 />
-    </div>
-  );
-}
-
-function Icon6() {
-  return (
-    <div className="absolute left-[32.8px] size-[40px] top-[32.8px]" data-name="Icon">
-      <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 40 40">
-        <g id="Icon">
-          <path d={svgPaths.p14a93580} id="Vector" stroke="var(--stroke-0, #00D492)" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.3" strokeWidth="3.33333" />
-          <path d={svgPaths.p29592b72} id="Vector_2" stroke="var(--stroke-0, #00D492)" strokeLinecap="round" strokeLinejoin="round" strokeOpacity="0.3" strokeWidth="3.33333" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
-function Paragraph6() {
-  return (
-    <div className="absolute h-[104px] left-[32.8px] top-[96.8px] w-[288.525px]" data-name="Paragraph">
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[26px] left-0 text-[16px] text-[rgba(255,255,255,0.6)] top-[-2.4px] w-[267px] whitespace-pre-wrap">После родов я долго не могла вернуться в форму. Елена составила программу с учетом грудного вскармливания.</p>
-    </div>
-  );
-}
-
-function Text2() {
-  return (
-    <div className="absolute border-[0.8px] border-[rgba(0,212,146,0.5)] border-solid h-[36px] left-[32.8px] top-[227.2px] w-[76.1px]" data-name="Text">
-      <p className="absolute font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] left-[16px] text-[#00d492] text-[14px] top-[7px] tracking-[0.7px] uppercase">-15 кг</p>
-    </div>
-  );
-}
-
-function Image6() {
-  return (
-    <div className="relative shrink-0 size-[48px]" data-name="Image (Мария Иванова)">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage5} />
-    </div>
-  );
-}
-
-function Container42() {
-  return (
-    <div className="flex flex-col justify-center shrink-0" data-name="Container">
-      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">Мария Иванова</p>
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">Предприниматель</p>
-    </div>
-  );
-}
-
-function Container41() {
-  return (
-    <div className="absolute content-stretch flex gap-[16px] h-[72.8px] items-center left-[32.33px] pt-[0.8px] top-[289px] w-[288.525px]" data-name="Container">
-      <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
-      <Image6 />
-      <Container42 />
-    </div>
-  );
-}
-
-function Container40() {
-  return (
-    <div className="bg-[rgba(255,255,255,0.05)] flex-[1_0_0] h-[394.4px] min-h-px min-w-px relative" data-name="Container">
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none" />
-      <Icon6 />
-      <Paragraph6 />
-      <Text2 />
-      <Container41 />
+      {/* Desktop: original absolute layout */}
+      <div className="hidden lg:block h-[394.4px] relative">
+        <QuoteIcon className="!size-[40px] absolute left-[32.8px] top-[32.8px]" />
+        <div className="absolute left-[32.8px] top-[96.8px] w-[288px]">
+          <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[26px] text-[16px] text-[rgba(255,255,255,0.6)]">{quote}</p>
+        </div>
+        <div className="absolute border-[0.8px] border-[rgba(0,212,146,0.5)] border-solid h-[36px] left-[32.8px] top-[227.2px]">
+          <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] px-[16px] text-[#00d492] text-[14px] py-[7px] tracking-[0.7px] uppercase">{kg}</p>
+        </div>
+        <div className="absolute flex gap-[16px] h-[72.8px] items-center left-[32.8px] pt-[0.8px] top-[288.8px] w-[288.525px]">
+          <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
+          <div className="relative shrink-0 size-[48px]">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSrc} />
+          </div>
+          <div className="flex flex-col justify-center shrink-0">
+            <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">{name}</p>
+            <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">{profession}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 function Frame11() {
   return (
-    <div className="content-stretch flex gap-[16px] items-center relative shrink-0 w-full">
-      <Container30 />
-      <Container35 />
-      <Container40 />
+    <div className="content-stretch flex flex-col lg:flex-row gap-[16px] items-stretch relative shrink-0 w-full">
+      <ReviewCard quote="За 3 месяца работы с Еленой я не только похудела на 12 кг, но и полностью изменила свое отношение к еде." kg="-12 кг" name="Анна Соколова" profession="Маркетолог" imgSrc={imgImage3} />
+      <ReviewCard quote="Программа спортивного питания помогла мне набрать 8 кг мышечной массы." kg="+8 кг" name="Дмитрий Петров" profession="IT-специалист" imgSrc={imgImage4} />
+      <ReviewCard quote="После родов я долго не могла вернуться в форму. Елена составила программу с учетом грудного вскармливания." kg="-15 кг" name="Мария Иванова" profession="Предприниматель" imgSrc={imgImage5} />
     </div>
   );
 }
 
 function Frame10() {
   return (
-    <div className="content-stretch flex flex-col gap-[48px] items-center relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full -mt-[100px]">
       <Frame9 />
       <Frame11 />
     </div>
