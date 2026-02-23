@@ -2,9 +2,9 @@
 
 > Обновлено: 2026-02-23
 
-## Статус: Инфраструктура настроена, готовы к адаптиву
+## Статус: Layout ограничен 1200px, готовы к адаптиву
 
-Проект собирается и запускается. Настроена система дизайн-токенов, брейкпоинтов и React-хелпер для адаптива. Modern-компоненты подготовлены, но приложение пока рендерит Figma-экспорт через `InteractiveSite`.
+Проект собирается и запускается. Layout ограничен до `max-width: 1200px` с центрированием. Настроена система дизайн-токенов, брейкпоинтов и React-хелпер для адаптива. Modern-компоненты подготовлены, но приложение пока рендерит Figma-экспорт через `InteractiveSite`.
 
 ## Что уже сделано
 
@@ -20,6 +20,8 @@
 - [x] Обновление Cursor rules: чтение/обновление `doc/` в workflow
 - [x] Добавление брейкпоинт-токенов в `@theme inline` (sm/md/lg/xl/2xl)
 - [x] Создание React-хука `useBreakpoint` (`src/app/hooks/useBreakpoint.ts`)
+- [x] Ограничение layout до `max-width: 1200px` (Site.tsx, theme.css)
+- [x] Переработка компонента Logo (`src/imports/Logo.tsx`)
 
 ## Текущие задачи
 
@@ -81,6 +83,13 @@
 - `PHILOSOPHY.md` — подход к работе
 - `.cursor/rules/project.mdc` — правила проекта
 
+## Layout
+
+- Максимальная ширина макета: **1200px** (`max-w-[1200px] mx-auto` на корневом `Site` div)
+- Body background: `bg-surface` (`#0a0a0a`) — обеспечивает единый тёмный фон за пределами контейнера
+- Все секции используют `w-full` вместо фиксированных ширин
+- Убраны `px-[120px]` из Header, Frame7 (Философия), Footer — они были рассчитаны на 1440px layout
+
 ## Известные проблемы
 
 - `App.tsx` рендерит `InteractiveSite` (Figma-обёртка), а не Modern-компоненты
@@ -91,8 +100,21 @@
 
 **Дата:** 2026-02-23
 **Что сделано:**
-- Обновлены Cursor rules: добавлено чтение/обновление `doc/` в workflow и project
-- Добавлены явные брейкпоинт-токены в `theme.css` (sm/md/lg/xl/2xl)
-- Создан хук `useBreakpoint` в `src/app/hooks/useBreakpoint.ts` (isMobile, isTablet, isDesktop, isWidescreen, breakpoint, width)
+- Ограничен layout до `max-width: 1200px` с центрированием (`mx-auto`)
+- Исправлен `Site.tsx`: `size-full` → `w-full max-w-[1200px] mx-auto`
+- Убрана жёсткая ширина `w-[1440px]` из `Frame2` (hero-обёртка)
+- Заменены `w-[1200px]` → `w-full` в секциях Frame1, Consultation, Frame10 (отзывы), Frame12 (контакты)
+- Убраны `px-[120px]` из Header, Frame7 (Философия), Footer (были рассчитаны на 1440px)
+- Исправлен фон body: `bg-background` → `bg-surface` для единого тёмного фона
+- Исправлено центрирование текста "Специальное предложение": `left-[600px]` → `left-1/2`
+- Переработан Logo (`src/imports/Logo.tsx`):
+  - Верхняя часть: SVG-path "ELENA OZER" (белый) + декоративные кружки (PNG `circle.png`, абсолютное позиционирование)
+  - Нижняя часть: SVG-path "ART OF NUTRITION" (`#00BA80`, fillOpacity 0.53)
+  - Отступ 16px между частями (`mt-[16px]`)
+  - Glass-эффект на subtitle: `backdrop-filter: blur(3px) brightness(1.4) saturate(1.5) contrast(1.3)`
+  - Убрана анимация pulse с кружков
+- Добавлен ассет `src/assets/circle.png` (декоративный кружок для логотипа)
+
+**Изменённые файлы:** `src/imports/Site.tsx`, `src/styles/theme.css`, `src/imports/Logo.tsx`, `src/app/components/InteractiveSite.tsx`
 
 **Следующий шаг:** Подключить Modern-компоненты в `App.tsx`, реализовать адаптивную вёрстку.

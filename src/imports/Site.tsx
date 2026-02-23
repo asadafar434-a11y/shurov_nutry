@@ -248,7 +248,7 @@ function Container() {
 
 function Frame1() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-[1200px]">
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
       <Content />
       <Container />
     </div>
@@ -268,7 +268,7 @@ function Paragraph() {
 
 function Frame2() {
   return (
-    <div className="content-stretch flex flex-col gap-[45px] items-center relative shrink-0 w-[1440px]">
+    <div className="content-stretch flex flex-col gap-[45px] items-center relative shrink-0 w-full">
       <Frame1 />
       <Paragraph />
     </div>
@@ -280,7 +280,7 @@ function Frame3() {
     <div className="content-stretch flex flex-col gap-[83px] items-start relative shrink-0 w-full z-[1]">
       <div className="bg-[rgba(7,7,7,0.9)] h-[100px] relative shrink-0 w-full" data-name="Header">
         <div className="flex flex-row items-center size-full">
-          <div className="content-stretch flex items-center justify-between px-[120px] relative size-full">
+          <div className="content-stretch flex items-center justify-between relative size-full">
             <Logo className="content-stretch flex flex-col items-start relative shrink-0" />
             <ListMenu />
             <Contacts />
@@ -583,7 +583,7 @@ function Frame7() {
       <div className="absolute inset-0 pointer-events-none">
         <GradientContainer />
       </div>
-      <div className="content-stretch flex flex-col gap-[32px] items-start px-[120px] relative size-full">
+      <div className="content-stretch flex flex-col gap-[32px] items-start relative size-full">
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[#00d492] text-[12px] text-center tracking-[3.6px] uppercase">Философия</p>
         <Block />
       </div>
@@ -627,9 +627,9 @@ function Button2() {
 
 function Consultation() {
   return (
-    <div className="content-stretch flex flex-col gap-[48px] items-center pb-[64px] pt-[104px] relative shrink-0 w-[1200px]" data-name="Consultation" style={{ backgroundImage: "url(\'data:image/svg+xml;utf8,<svg viewBox=\\'0 0 1200 376\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'0.09000000357627869\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(41.5 12.487 -39.853 112.49 600 188)\\'><stop stop-color=\\'rgba(255,255,255,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(202,202,202,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(148,148,148,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(121,121,121,1)\\' offset=\\'0.625\\'/><stop stop-color=\\'rgba(95,95,95,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(68,68,68,1)\\' offset=\\'0.875\\'/><stop stop-color=\\'rgba(41,41,41,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>\')" }}>
+    <div className="content-stretch flex flex-col gap-[48px] items-center pb-[64px] pt-[104px] relative shrink-0 w-full" data-name="Consultation" style={{ backgroundImage: "url(\'data:image/svg+xml;utf8,<svg viewBox=\\'0 0 1200 376\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'0.09000000357627869\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(41.5 12.487 -39.853 112.49 600 188)\\'><stop stop-color=\\'rgba(255,255,255,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(202,202,202,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(148,148,148,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(121,121,121,1)\\' offset=\\'0.625\\'/><stop stop-color=\\'rgba(95,95,95,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(68,68,68,1)\\' offset=\\'0.875\\'/><stop stop-color=\\'rgba(41,41,41,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>\')" }}>
       <Frame8 />
-      <p className="-translate-x-1/2 absolute font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-[600px] not-italic text-[#00d492] text-[12px] text-center top-[20px] tracking-[3.6px] uppercase w-[1200px] whitespace-pre-wrap">Специальное предложение</p>
+      <p className="-translate-x-1/2 absolute font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-1/2 not-italic text-[#00d492] text-[12px] text-center top-[20px] tracking-[3.6px] uppercase w-full whitespace-pre-wrap">Специальное предложение</p>
       <Button2 />
     </div>
   );
@@ -918,7 +918,7 @@ function Frame11() {
 
 function Frame10() {
   return (
-    <div className="content-stretch flex flex-col gap-[48px] items-center relative shrink-0 w-[1200px]">
+    <div className="content-stretch flex flex-col gap-[48px] items-center relative shrink-0 w-full">
       <Frame9 />
       <Frame11 />
     </div>
@@ -1293,7 +1293,7 @@ function Container45() {
 
 function Frame12() {
   return (
-    <div className="content-stretch flex flex-col gap-[48px] items-center relative shrink-0 w-[1200px]">
+    <div className="content-stretch flex flex-col gap-[48px] items-center relative shrink-0 w-full">
       <Frame13 />
       <Container45 />
     </div>
@@ -1539,7 +1539,7 @@ function Container68() {
 function Container62() {
   return (
     <div className="h-[220.775px] relative shrink-0 w-full" data-name="Container">
-      <div className="content-stretch flex flex-col gap-[48px] items-start px-[120px] relative size-full">
+      <div className="content-stretch flex flex-col gap-[48px] items-start relative size-full">
         <Container63 />
         <Container68 />
       </div>
@@ -1558,7 +1558,7 @@ function Footer() {
 
 export default function Site() {
   return (
-    <div className="bg-[#0a0a0a] content-stretch flex flex-col gap-[140px] items-center relative size-full" data-name="Site">
+    <div className="bg-[#0a0a0a] content-stretch flex flex-col gap-[140px] items-center relative w-full max-w-[1200px] mx-auto" data-name="Site">
       <HeroBlock />
       <Frame7 />
       <Consultation />

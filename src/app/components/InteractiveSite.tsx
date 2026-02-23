@@ -1,14 +1,14 @@
-import { motion } from 'motion/react';
-import { useEffect, useRef, useState } from 'react';
-import Site from '../../imports/Site';
+import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import Site from "../../imports/Site";
 
 export function InteractiveSite() {
   const siteRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
   const [focusedInput, setFocusedInput] = useState<string | null>(null);
 
@@ -19,44 +19,44 @@ export function InteractiveSite() {
     const buttons = siteRef.current.querySelectorAll('[data-name="Button"]');
     buttons.forEach((button) => {
       const buttonEl = button as HTMLElement;
-      buttonEl.style.cursor = 'pointer';
-      
-      const buttonText = buttonEl.textContent?.toLowerCase() || '';
-      
-      if (buttonText.includes('записаться')) {
-        buttonEl.addEventListener('click', () => {
+      buttonEl.style.cursor = "pointer";
+
+      const buttonText = buttonEl.textContent?.toLowerCase() || "";
+
+      if (buttonText.includes("записаться")) {
+        buttonEl.addEventListener("click", () => {
           // Find contact section by looking for "Начните путь" text
           const allContainers = siteRef.current?.querySelectorAll('[data-name="Container"]');
           let contactSection: Element | null = null;
-          allContainers?.forEach(container => {
-            if (container.textContent?.includes('Начните путь')) {
+          allContainers?.forEach((container) => {
+            if (container.textContent?.includes("Начните путь")) {
               contactSection = container;
             }
           });
-          
+
           if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            contactSection.scrollIntoView({ behavior: "smooth", block: "center" });
           } else {
             // Fallback to form
             const form = siteRef.current?.querySelector('[data-name="Form"]');
-            form?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            form?.scrollIntoView({ behavior: "smooth", block: "center" });
           }
         });
       }
-      
-      if (buttonText.includes('узнать больше')) {
-        buttonEl.addEventListener('click', () => {
+
+      if (buttonText.includes("узнать больше")) {
+        buttonEl.addEventListener("click", () => {
           const aboutSection = siteRef.current?.querySelector('[data-name="Block 2"]');
-          aboutSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          aboutSection?.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       }
-      
-      if (buttonText.includes('отправить')) {
-        buttonEl.addEventListener('click', (e) => {
+
+      if (buttonText.includes("отправить")) {
+        buttonEl.addEventListener("click", (e) => {
           e.preventDefault();
-          console.log('Form submitted:', formData);
-          alert(`Спасибо, ${formData.name || 'гость'}! Мы свяжемся с вами в ближайшее время.`);
-          setFormData({ name: '', email: '', phone: '', message: '' });
+          console.log("Form submitted:", formData);
+          alert(`Спасибо, ${formData.name || "гость"}! Мы свяжемся с вами в ближайшее время.`);
+          setFormData({ name: "", email: "", phone: "", message: "" });
         });
       }
     });
@@ -65,17 +65,23 @@ export function InteractiveSite() {
     const menuItems = siteRef.current.querySelectorAll('[data-name="List menu"] p');
     menuItems.forEach((item, index) => {
       const itemEl = item as HTMLElement;
-      itemEl.style.cursor = 'pointer';
-      
-      itemEl.addEventListener('click', () => {
-        if (index === 0) { // О специалисте
+      itemEl.style.cursor = "pointer";
+
+      itemEl.addEventListener("click", () => {
+        if (index === 0) {
+          // О специалисте
           const aboutSection = siteRef.current?.querySelector('[data-name="Block 2"]');
-          aboutSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else if (index === 1) { // Результаты
+          aboutSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else if (index === 1) {
+          // Результаты
           const resultsSection = siteRef.current?.querySelectorAll('[data-name="Container"]');
-          resultsSection.forEach(section => {
-            if (section.textContent?.includes('До и После') || section.textContent?.includes('кг') || section.textContent?.includes('месяц')) {
-              section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          resultsSection.forEach((section) => {
+            if (
+              section.textContent?.includes("До и После") ||
+              section.textContent?.includes("кг") ||
+              section.textContent?.includes("месяц")
+            ) {
+              section.scrollIntoView({ behavior: "smooth", block: "center" });
             }
           });
         }
@@ -86,15 +92,18 @@ export function InteractiveSite() {
     const socialLinks = siteRef.current.querySelectorAll('[data-name="Link"]');
     socialLinks.forEach((link, index) => {
       const linkEl = link as HTMLElement;
-      linkEl.style.cursor = 'pointer';
-      
-      linkEl.addEventListener('click', () => {
-        if (index === 0) { // Instagram
-          window.open('https://instagram.com', '_blank');
-        } else if (index === 1) { // Telegram
-          window.open('https://t.me', '_blank');
-        } else if (index === 2) { // WhatsApp
-          window.open('https://wa.me', '_blank');
+      linkEl.style.cursor = "pointer";
+
+      linkEl.addEventListener("click", () => {
+        if (index === 0) {
+          // Instagram
+          window.open("https://instagram.com", "_blank");
+        } else if (index === 1) {
+          // Telegram
+          window.open("https://t.me", "_blank");
+        } else if (index === 2) {
+          // WhatsApp
+          window.open("https://wa.me", "_blank");
         }
       });
     });
@@ -105,70 +114,73 @@ export function InteractiveSite() {
     const phoneInput = siteRef.current.querySelector('[data-name="Phone Input"]');
     const messageInput = siteRef.current.querySelector('[data-name="Text Area"]');
 
-    const makeInputInteractive = (container: Element | null, field: keyof typeof formData, type: string = 'text') => {
+    const makeInputInteractive = (container: Element | null, field: keyof typeof formData, type: string = "text") => {
       if (!container) return;
-      
-      const placeholder = container.querySelector('p');
+
+      const placeholder = container.querySelector("p");
       if (!placeholder) return;
 
-      if (field === 'message') {
-        const textarea = document.createElement('textarea');
-        textarea.className = 'w-full bg-transparent text-white text-[16px] font-["Manrope:Regular",sans-serif] outline-none resize-none';
-        textarea.placeholder = placeholder.textContent || '';
-        textarea.style.fontFamily = 'Manrope, sans-serif';
+      if (field === "message") {
+        const textarea = document.createElement("textarea");
+        textarea.className =
+          'w-full bg-transparent text-white text-[16px] font-["Manrope:Regular",sans-serif] outline-none resize-none';
+        textarea.placeholder = placeholder.textContent || "";
+        textarea.style.fontFamily = "Manrope, sans-serif";
         textarea.rows = 4;
-        
-        textarea.addEventListener('focus', () => setFocusedInput(field));
-        textarea.addEventListener('blur', () => setFocusedInput(null));
-        textarea.addEventListener('input', (e) => {
-          setFormData(prev => ({ ...prev, [field]: (e.target as HTMLTextAreaElement).value }));
+
+        textarea.addEventListener("focus", () => setFocusedInput(field));
+        textarea.addEventListener("blur", () => setFocusedInput(null));
+        textarea.addEventListener("input", (e) => {
+          setFormData((prev) => ({ ...prev, [field]: (e.target as HTMLTextAreaElement).value }));
         });
-        
+
         placeholder.parentElement?.appendChild(textarea);
-        placeholder.style.display = 'none';
+        placeholder.style.display = "none";
         return;
       }
-      
-      const input = document.createElement('input');
+
+      const input = document.createElement("input");
       input.type = type;
       input.className = 'w-full bg-transparent text-white text-[16px] font-["Manrope:Regular",sans-serif] outline-none';
-      input.placeholder = placeholder.textContent || '';
-      input.style.fontFamily = 'Manrope, sans-serif';
-      
-      input.addEventListener('focus', () => setFocusedInput(field));
-      input.addEventListener('blur', () => setFocusedInput(null));
-      input.addEventListener('input', (e) => {
-        setFormData(prev => ({ ...prev, [field]: (e.target as HTMLInputElement).value }));
+      input.placeholder = placeholder.textContent || "";
+      input.style.fontFamily = "Manrope, sans-serif";
+
+      input.addEventListener("focus", () => setFocusedInput(field));
+      input.addEventListener("blur", () => setFocusedInput(null));
+      input.addEventListener("input", (e) => {
+        setFormData((prev) => ({ ...prev, [field]: (e.target as HTMLInputElement).value }));
       });
-      
+
       placeholder.parentElement?.appendChild(input);
-      placeholder.style.display = 'none';
+      placeholder.style.display = "none";
     };
 
-    makeInputInteractive(nameInput, 'name');
-    makeInputInteractive(emailInput, 'email', 'email');
-    makeInputInteractive(phoneInput, 'phone', 'tel');
-    makeInputInteractive(messageInput, 'message');
+    makeInputInteractive(nameInput, "name");
+    makeInputInteractive(emailInput, "email", "email");
+    makeInputInteractive(phoneInput, "phone", "tel");
+    makeInputInteractive(messageInput, "message");
 
     // Intersection Observer for scroll animations
-    const sections = siteRef.current.querySelectorAll('[data-name="Hero block"], [data-name="Block 2"], [data-name="Consultation"]');
-    
+    const sections = siteRef.current.querySelectorAll(
+      '[data-name="Hero block"], [data-name="Block 2"], [data-name="Consultation"]',
+    );
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animated');
+            entry.target.classList.add("animated");
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     sections.forEach((section) => observer.observe(section));
 
     return () => {
       observer.disconnect();
-      buttons.forEach(button => {
+      buttons.forEach((button) => {
         const clone = button.cloneNode(true);
         button.parentNode?.replaceChild(clone, button);
       });
@@ -176,14 +188,17 @@ export function InteractiveSite() {
   }, [formData]);
 
   return (
-    <motion.div
-      ref={siteRef}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
+    <motion.div ref={siteRef} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
       <Site />
       <style>{`
+        /* Logo subtitle Glass effect */
+        .logo-glass {
+          position: relative;
+          display: inline-block;
+          backdrop-filter: blur(3px) brightness(1.9) saturate(1.9) contrast(10);
+          -webkit-backdrop-filter: blur(3px) brightness(1.4) saturate(1.5) contrast(1.3);
+        }
+
         /* Smooth scrolling */
         html {
           scroll-behavior: smooth;
@@ -444,29 +459,6 @@ export function InteractiveSite() {
           }
         }
 
-        /* Logo dots pulse */
-        [data-name="logo"] circle {
-          animation: pulse 2s ease-in-out infinite;
-        }
-
-        [data-name="logo"] svg:first-of-type circle {
-          animation-delay: 0s;
-        }
-
-        [data-name="logo"] svg:last-of-type circle {
-          animation-delay: 0.5s;
-        }
-
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 0.2;
-            transform: scale(1);
-          }
-          50% {
-            opacity: 1;
-            transform: scale(1.2);
-          }
-        }
 
         /* Gradient text shimmer */
         [style*="WebkitTextFillColor"] {
