@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import heroImage from 'figma:asset/c6321bc658df8915369191499ea66641bd0a1058.png';
+import heroImage from '@/assets/c6321bc658df8915369191499ea66641bd0a1058.png';
 
 export function ServicesModern() {
   return (

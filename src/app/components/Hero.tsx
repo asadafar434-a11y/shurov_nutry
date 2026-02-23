@@ -1,8 +1,8 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Play, Menu } from 'lucide-react';
-import heroImage from 'figma:asset/c6321bc658df8915369191499ea66641bd0a1058.png';
-import aboutImage from 'figma:asset/a8eea92051d14e6a7c46659a265d548f3f638cea.png';
-import contactImage from 'figma:asset/9a32dbb6ed65f0283e8974d5278932d4bcae051e.png';
+import heroImage from '@/assets/c6321bc658df8915369191499ea66641bd0a1058.png';
+import aboutImage from '@/assets/a8eea92051d14e6a7c46659a265d548f3f638cea.png';
+import contactImage from '@/assets/9a32dbb6ed65f0283e8974d5278932d4bcae051e.png';
 
 export function Hero() {
   return (

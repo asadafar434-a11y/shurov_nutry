@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Award, Users, Heart, Target } from 'lucide-react';
-import aboutImage from 'figma:asset/a8eea92051d14e6a7c46659a265d548f3f638cea.png';
+import aboutImage from '@/assets/a8eea92051d14e6a7c46659a265d548f3f638cea.png';
 
 const achievements = [
   {

@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import contactImage from 'figma:asset/9a32dbb6ed65f0283e8974d5278932d4bcae051e.png';
+import contactImage from '@/assets/9a32dbb6ed65f0283e8974d5278932d4bcae051e.png';
 
 export function ContactModern() {
   const [formData, setFormData] = useState({
