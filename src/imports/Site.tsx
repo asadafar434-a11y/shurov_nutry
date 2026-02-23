@@ -167,9 +167,9 @@ function ImageHealthyFood() {
 
 function Container3() {
   return (
-    <div className="absolute left-[64px] rounded-[26843500px] size-[304px] top-[64px]" data-name="Container">
-      <div className="content-stretch flex flex-col items-start overflow-clip p-[4px] relative rounded-[inherit] size-full">
-        <ImageHealthyFood />
+    <div className="absolute left-[64px] rounded-[26843500px] size-[304px] top-[64px] z-10" data-name="Container">
+      <div className="overflow-hidden relative rounded-[inherit] size-full">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageHealthyFood} />
       </div>
       <div aria-hidden="true" className="absolute border-4 border-[rgba(255,255,255,0.05)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
     </div>
@@ -186,9 +186,9 @@ function Image() {
 
 function Container4() {
   return (
-    <div className="absolute left-[108px] rounded-[26843500px] size-[96px] top-[-16px]" data-name="Container">
-      <div className="content-stretch flex flex-col items-start overflow-clip p-[1.6px] relative rounded-[inherit] size-full">
-        <Image />
+    <div className="absolute rounded-[26843500px] size-[96px]" data-name="Container" style={{ top: 'calc(50% - 48px)', left: -48 }}>
+      <div className="overflow-hidden relative rounded-[inherit] size-full hero-orbit-img">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage} />
       </div>
       <div aria-hidden="true" className="absolute border-[1.6px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
     </div>
@@ -205,9 +205,9 @@ function Image1() {
 
 function Container5() {
   return (
-    <div className="absolute left-[-32px] rounded-[26843500px] size-[128px] top-[272px]" data-name="Container">
-      <div className="content-stretch flex flex-col items-start overflow-clip p-[1.6px] relative rounded-[inherit] size-full">
-        <Image1 />
+    <div className="absolute rounded-[26843500px] size-[128px]" data-name="Container" style={{ top: 'calc(50% - 64px)', left: -64 }}>
+      <div className="overflow-hidden relative rounded-[inherit] size-full hero-orbit-img">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage1} />
       </div>
       <div aria-hidden="true" className="absolute border-[1.6px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
     </div>
@@ -224,9 +224,9 @@ function Image2() {
 
 function Container6() {
   return (
-    <div className="absolute left-[288px] rounded-[26843500px] size-[112px] top-[336px]" data-name="Container">
-      <div className="content-stretch flex flex-col items-start overflow-clip p-[1.6px] relative rounded-[inherit] size-full">
-        <Image2 />
+    <div className="absolute rounded-[26843500px] size-[112px]" data-name="Container" style={{ top: 'calc(50% - 56px)', left: -56 }}>
+      <div className="overflow-hidden relative rounded-[inherit] size-full hero-orbit-img">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage2} />
       </div>
       <div aria-hidden="true" className="absolute border-[1.6px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
     </div>
@@ -239,9 +239,15 @@ function Container() {
       <Container1 />
       <Container2 />
       <Container3 />
-      <Container4 />
-      <Container5 />
-      <Container6 />
+      <div className="hero-orbit-ring absolute rounded-full" style={{ '--orbit-duration': '28s', '--orbit-delay': '-7s', width: 390, height: 390, top: 'calc(50% - 195px)', left: 'calc(50% - 195px)' } as React.CSSProperties}>
+        <Container4 />
+      </div>
+      <div className="hero-orbit-ring absolute rounded-full" style={{ '--orbit-duration': '35s', '--orbit-delay': '-23s', width: 440, height: 440, top: 'calc(50% - 220px)', left: 'calc(50% - 220px)' } as React.CSSProperties}>
+        <Container5 />
+      </div>
+      <div className="hero-orbit-ring absolute rounded-full" style={{ '--orbit-duration': '42s', '--orbit-delay': '-14s', width: 436, height: 436, top: 'calc(50% - 218px)', left: 'calc(50% - 218px)' } as React.CSSProperties}>
+        <Container6 />
+      </div>
     </div>
   );
 }

@@ -2,9 +2,9 @@
 
 > Обновлено: 2026-02-23
 
-## Статус: Layout ограничен 1200px, готовы к адаптиву
+## Статус: Орбитальная анимация в Hero, layout 1200px
 
-Проект собирается и запускается. Layout ограничен до `max-width: 1200px` с центрированием. Настроена система дизайн-токенов, брейкпоинтов и React-хелпер для адаптива. Modern-компоненты подготовлены, но приложение пока рендерит Figma-экспорт через `InteractiveSite`.
+Проект собирается и запускается. Layout ограничен до `max-width: 1200px` с центрированием. В Hero-блоке реализована орбитальная анимация кружков-сателлитов (CSS @keyframes, подход как Solar System из CodePen). Modern-компоненты подготовлены, но приложение рендерит Figma-экспорт через `InteractiveSite`.
 
 ## Что уже сделано
 
@@ -22,6 +22,7 @@
 - [x] Создание React-хука `useBreakpoint` (`src/app/hooks/useBreakpoint.ts`)
 - [x] Ограничение layout до `max-width: 1200px` (Site.tsx, theme.css)
 - [x] Переработка компонента Logo (`src/imports/Logo.tsx`)
+- [x] Орбитальная анимация кружков-сателлитов в Hero (Site.tsx, InteractiveSite.tsx)
 
 ## Текущие задачи
 
@@ -38,7 +39,7 @@
 | `src/app/App.tsx` | Корневой компонент, сейчас рендерит `InteractiveSite` |
 | `src/app/hooks/useBreakpoint.ts` | Хук адаптива: isMobile, isTablet, isDesktop, isWidescreen |
 | `src/app/components/Navigation.tsx` | Навигация |
-| `src/app/components/Hero.tsx` | Главный экран |
+| `src/app/components/Hero.tsx` | Главный экран (Modern, не подключён) |
 | `src/app/components/AboutModern.tsx` | Секция «Философия» |
 | `src/app/components/ServicesGrid.tsx` | Услуги (6 карточек + CTA) |
 | `src/app/components/Testimonials.tsx` | Отзывы |
@@ -90,31 +91,61 @@
 - Все секции используют `w-full` вместо фиксированных ширин
 - Убраны `px-[120px]` из Header, Frame7 (Философия), Footer — они были рассчитаны на 1440px layout
 
+## Орбитальная анимация Hero
+
+Три кружка-сателлита с изображениями вращаются вокруг центральной картинки (подход из [CodePen Solar System](https://codepen.io/AliceRez/pen/LYpwOzK)):
+
+### Архитектура анимации
+
+- Каждая орбита — круглый `div` (`.hero-orbit-ring`), центрированный в контейнере 432x432px
+- Орбита вращается через CSS `@keyframes hero-orbit-spin` (0° → 360°)
+- Сателлит расположен на левом краю орбиты (`top: 50% - size/2, left: -size/2`)
+- Изображение внутри контр-вращается (`.hero-orbit-img`, `hero-orbit-counter`) чтобы фото оставалось ровным
+- CSS-переменные `--orbit-duration` и `--orbit-delay` на каждом orbit ring управляют скоростью и стартовой позицией
+
+### Параметры орбит
+
+| Орбита | Диаметр | Сателлит | Скорость | Старт |
+|--------|---------|----------|----------|-------|
+| 1 | 390px | 96px (Container4) | 28s | ~90° (`-7s`) |
+| 2 | 440px | 128px (Container5) | 35s | ~237° (`-23s`) |
+| 3 | 436px | 112px (Container6) | 42s | ~120° (`-14s`) |
+
+### Изменённые компоненты
+
+- `Container` в `Site.tsx` — обёрнуты Container4/5/6 в orbit ring divs
+- `Container4/5/6` — убрано статичное позиционирование, заменено на orbit-edge позиционирование
+- `Container3` — добавлен `z-10` (центральное фото всегда впереди сателлитов)
+- Сателлиты: убрана Figma-обёртка с `overflow-clip p-[1.6px] flex-col`, заменена на `overflow-hidden` с прямым `<img>`
+- `InteractiveSite.tsx` — добавлены CSS `@keyframes` и классы `.hero-orbit-ring`, `.hero-orbit-img`
+
 ## Известные проблемы
 
 - `App.tsx` рендерит `InteractiveSite` (Figma-обёртка), а не Modern-компоненты
 - Legacy-компоненты (About.tsx, Contact.tsx и др.) не удалены
 - В `InteractiveSite.tsx` и `Site.tsx` по-прежнему хардкод-цвета (вне scope текущей задачи)
+- `Hero.tsx` (Modern-компонент) содержит альтернативную реализацию с orbit animation на Framer Motion, но не подключён
 
 ## Последняя сессия
 
 **Дата:** 2026-02-23
 **Что сделано:**
-- Ограничен layout до `max-width: 1200px` с центрированием (`mx-auto`)
-- Исправлен `Site.tsx`: `size-full` → `w-full max-w-[1200px] mx-auto`
-- Убрана жёсткая ширина `w-[1440px]` из `Frame2` (hero-обёртка)
-- Заменены `w-[1200px]` → `w-full` в секциях Frame1, Consultation, Frame10 (отзывы), Frame12 (контакты)
-- Убраны `px-[120px]` из Header, Frame7 (Философия), Footer (были рассчитаны на 1440px)
-- Исправлен фон body: `bg-background` → `bg-surface` для единого тёмного фона
-- Исправлено центрирование текста "Специальное предложение": `left-[600px]` → `left-1/2`
-- Переработан Logo (`src/imports/Logo.tsx`):
-  - Верхняя часть: SVG-path "ELENA OZER" (белый) + декоративные кружки (PNG `circle.png`, абсолютное позиционирование)
-  - Нижняя часть: SVG-path "ART OF NUTRITION" (`#00BA80`, fillOpacity 0.53)
-  - Отступ 16px между частями (`mt-[16px]`)
-  - Glass-эффект на subtitle: `backdrop-filter: blur(3px) brightness(1.4) saturate(1.5) contrast(1.3)`
-  - Убрана анимация pulse с кружков
-- Добавлен ассет `src/assets/circle.png` (декоративный кружок для логотипа)
+- Реализована орбитальная анимация кружков-сателлитов в Hero-блоке:
+  - Container4/5/6 обёрнуты в вращающиеся orbit ring divs
+  - CSS `@keyframes hero-orbit-spin` / `hero-orbit-counter` в InteractiveSite.tsx
+  - CSS-переменные `--orbit-duration` и `--orbit-delay` для управления скоростью и стартом
+  - Разные стартовые позиции через отрицательный `animation-delay` (`-7s`, `-23s`, `-14s`)
+- Исправлено обрезание кружков:
+  - `overflow-clip` → `overflow-hidden` + прямой `<img>` в Container4/5/6
+  - Убрана Figma-обёртка `flex-col items-start p-[1.6px]` — изображения теперь заполняют весь круг
+  - Центральная картинка (Container3): убран `p-[4px]`, `<img>` заполняет весь круг 304px
+- Центральная картинка (Container3) всегда впереди: добавлен `z-10`
+- App.tsx: временно добавлен и убран `<Hero />` при тестировании
 
-**Изменённые файлы:** `src/imports/Site.tsx`, `src/styles/theme.css`, `src/imports/Logo.tsx`, `src/app/components/InteractiveSite.tsx`
+**Изменённые файлы:**
+- `src/imports/Site.tsx` — Container, Container3, Container4, Container5, Container6
+- `src/app/components/InteractiveSite.tsx` — CSS keyframes и orbit классы
+- `src/app/App.tsx` — откачен к `<InteractiveSite />`
+- `src/app/components/Hero.tsx` — добавлена альтернативная реализация с orbit (не подключена)
 
 **Следующий шаг:** Подключить Modern-компоненты в `App.tsx`, реализовать адаптивную вёрстку.

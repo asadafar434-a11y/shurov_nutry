@@ -11,8 +11,9 @@
 
 ### Hero.tsx
 Главный экран с заголовком, текстом и декоративными кругами с изображениями.
-- Использует 3 изображения из `@/assets/`
-- Анимации появления через Motion
+- Использует 3 изображения из `@/assets/` + дополнительное foodImage
+- Содержит альтернативную реализацию орбитальной анимации (CSS keyframes + `<style>`)
+- **Не подключён** к `App.tsx` — орбитальная анимация реализована в Figma-экспорте (Site.tsx + InteractiveSite.tsx)
 
 ### AboutModern.tsx
 Секция «Философия» — фото Елены + статистика + список принципов.
@@ -61,6 +62,9 @@ SVG-логотип «ELENA».
 
 ### InteractiveSite.tsx
 Обёртка вокруг `Site.tsx`: рендерит Figma-код и добавляет интерактивность через `useEffect` + DOM-манипуляции (scroll, hover, формы).
+- CSS `@keyframes hero-orbit-spin` / `hero-orbit-counter` — орбитальная анимация Hero
+- Классы `.hero-orbit-ring` и `.hero-orbit-img` — управляются через CSS-переменные `--orbit-duration`, `--orbit-delay`
+- Logo Glass-эффект: `.logo-glass` с `backdrop-filter`
 
 ## Legacy-компоненты
 

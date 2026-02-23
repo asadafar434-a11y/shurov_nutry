@@ -199,6 +199,25 @@ export function InteractiveSite() {
           -webkit-backdrop-filter: blur(3px) brightness(1.4) saturate(1.5) contrast(1.3);
         }
 
+        /* Hero orbit animation */
+        @keyframes hero-orbit-spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes hero-orbit-counter {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(-360deg); }
+        }
+        .hero-orbit-ring {
+          animation: hero-orbit-spin var(--orbit-duration) linear infinite;
+          animation-delay: var(--orbit-delay, 0s);
+          border: 0.8px solid rgba(255,255,255,0.04);
+        }
+        .hero-orbit-img {
+          animation: hero-orbit-counter var(--orbit-duration) linear infinite;
+          animation-delay: var(--orbit-delay, 0s);
+        }
+
         /* Smooth scrolling */
         html {
           scroll-behavior: smooth;

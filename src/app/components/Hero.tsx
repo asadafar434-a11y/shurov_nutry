@@ -1,12 +1,30 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Play, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import heroImage from '@/assets/c6321bc658df8915369191499ea66641bd0a1058.png';
 import aboutImage from '@/assets/a8eea92051d14e6a7c46659a265d548f3f638cea.png';
 import contactImage from '@/assets/9a32dbb6ed65f0283e8974d5278932d4bcae051e.png';
+import foodImage from '@/assets/e5294f751d0c5ac385da581d5c92cf3e1899c8a5.png';
+
+const orbits = [
+  { src: aboutImage, size: 72, orbitPct: 65, duration: 28 },
+  { src: contactImage, size: 88, orbitPct: 82, duration: 35 },
+  { src: foodImage, size: 80, orbitPct: 100, duration: 42 },
+];
 
 export function Hero() {
   return (
-    <section className="min-h-screen bg-surface relative flex items-center justify-center overflow-hidden">
+    <section className="min-h-screen bg-surface relative flex items-center justify-center overflow-x-clip">
+      <style>{`
+        @keyframes hero-orbit {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes hero-orbit-reverse {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(-360deg); }
+        }
+      `}</style>
+
       {/* Background texture */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -85,21 +103,16 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right side - Hero image with decorative elements */}
+          {/* Right side - Hero image with orbiting elements */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
             className="relative"
           >
-            {/* Main image circle */}
             <div className="relative w-full aspect-square max-w-xl mx-auto">
-              {/* Decorative circle border */}
-              <div className="absolute inset-0 rounded-full border border-white/10"></div>
-              <div className="absolute inset-8 rounded-full border border-white/5"></div>
-              
               {/* Center image */}
-              <div className="absolute inset-16 rounded-full overflow-hidden border-4 border-white/5">
+              <div className="absolute inset-[22%] rounded-full overflow-hidden border-2 border-white/5 z-10">
                 <img
                   src={heroImage}
                   alt="Healthy food"
@@ -107,33 +120,42 @@ export function Hero() {
                 />
               </div>
 
-              {/* Decorative small circles around */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
-                className="absolute -top-4 left-1/4 w-24 h-24 rounded-full overflow-hidden border-2 border-white/10"
-              >
-                <img src={aboutImage} alt="" className="w-full h-full object-cover" />
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 1.4 }}
-                className="absolute bottom-8 -left-8 w-32 h-32 rounded-full overflow-hidden border-2 border-white/10"
-              >
-                <img src={contactImage} alt="" className="w-full h-full object-cover" />
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 1.6 }}
-                className="absolute -bottom-4 right-8 w-28 h-28 rounded-full overflow-hidden border-2 border-white/10"
-              >
-                <img src="https://images.unsplash.com/photo-1642339800099-921df1a0a958?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwZm9vZCUyMGJvd2x8ZW58MXx8fHwxNzY5MzUyODA1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="" className="w-full h-full object-cover" />
-              </motion.div>
+              {/* Orbiting satellites */}
+              {orbits.map((orbit, i) => {
+                const offset = (100 - orbit.orbitPct) / 2;
+                return (
+                  <div
+                    key={i}
+                    className="absolute rounded-full border border-white/[0.04]"
+                    style={{
+                      width: `${orbit.orbitPct}%`,
+                      height: `${orbit.orbitPct}%`,
+                      top: `${offset}%`,
+                      left: `${offset}%`,
+                      animation: `hero-orbit ${orbit.duration}s linear infinite`,
+                    }}
+                  >
+                    <div
+                      className="absolute rounded-full overflow-hidden border-2 border-white/10 shadow-lg shadow-black/20"
+                      style={{
+                        width: orbit.size,
+                        height: orbit.size,
+                        top: `calc(50% - ${orbit.size / 2}px)`,
+                        left: -(orbit.size / 2),
+                      }}
+                    >
+                      <img
+                        src={orbit.src}
+                        alt=""
+                        className="w-full h-full object-cover"
+                        style={{
+                          animation: `hero-orbit-reverse ${orbit.duration}s linear infinite`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
