@@ -353,7 +353,7 @@ function Container12() {
 
 function Container10() {
   return (
-    <div className="absolute bg-[rgba(0,0,0,0.2)] content-stretch flex flex-col gap-[8px] h-[135.988px] items-start left-[338px] pt-[32px] px-[32px] top-[24px] w-[153.163px]" data-name="Container">
+    <div className="absolute bg-[rgba(0,0,0,0.07)] content-stretch flex flex-col gap-[8px] h-[135.988px] items-start left-[338px] pt-[32px] px-[32px] top-[24px] w-[153.163px]" data-name="Container" style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
       <Container11 />
       <Container12 />
     </div>
