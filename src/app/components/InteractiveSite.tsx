@@ -4,27 +4,19 @@ import Site from "../../imports/Site";
 
 export function InteractiveSite() {
   const siteRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
   const formDataRef = useRef({
-=======
-  const [formData, setFormData] = useState({
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     name: "",
     email: "",
     phone: "",
     message: "",
   });
   const [focusedInput, setFocusedInput] = useState<string | null>(null);
-<<<<<<< HEAD
   const [legalModal, setLegalModal] = useState<"privacy" | "offer" | null>(null);
   const isSendingRef = useRef(false);
-=======
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
 
   useEffect(() => {
     if (!siteRef.current) return;
 
-<<<<<<< HEAD
     // Field validation helpers
     const setFieldError = (selector: string, hasError: boolean, message = "") => {
       const container = siteRef.current?.querySelector(`[data-name="${selector}"]`) as HTMLElement | null;
@@ -93,8 +85,6 @@ export function InteractiveSite() {
       return isValid;
     };
 
-=======
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     // Make all buttons clickable and add scroll behavior
     const buttons = siteRef.current.querySelectorAll('[data-name="Button"]');
     buttons.forEach((button) => {
@@ -105,10 +95,6 @@ export function InteractiveSite() {
 
       if (buttonText.includes("записаться")) {
         buttonEl.addEventListener("click", () => {
-<<<<<<< HEAD
-=======
-          // Find contact section by looking for "Начните путь" text
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
           const allContainers = siteRef.current?.querySelectorAll('[data-name="Container"]');
           let contactSection: Element | null = null;
           allContainers?.forEach((container) => {
@@ -120,10 +106,6 @@ export function InteractiveSite() {
           if (contactSection) {
             contactSection.scrollIntoView({ behavior: "smooth", block: "center" });
           } else {
-<<<<<<< HEAD
-=======
-            // Fallback to form
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
             const form = siteRef.current?.querySelector('[data-name="Form"]');
             form?.scrollIntoView({ behavior: "smooth", block: "center" });
           }
@@ -138,7 +120,6 @@ export function InteractiveSite() {
       }
 
       if (buttonText.includes("отправить")) {
-<<<<<<< HEAD
         buttonEl.addEventListener("click", async (e) => {
           e.preventDefault();
           if (!validateForm()) return;
@@ -183,13 +164,6 @@ export function InteractiveSite() {
           inputs?.forEach((el) => {
             (el as HTMLInputElement | HTMLTextAreaElement).value = "";
           });
-=======
-        buttonEl.addEventListener("click", (e) => {
-          e.preventDefault();
-          console.log("Form submitted:", formData);
-          alert(`Спасибо, ${formData.name || "гость"}! Мы свяжемся с вами в ближайшее время.`);
-          setFormData({ name: "", email: "", phone: "", message: "" });
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         });
       }
     });
@@ -202,33 +176,14 @@ export function InteractiveSite() {
 
       itemEl.addEventListener("click", () => {
         if (index === 0) {
-<<<<<<< HEAD
           const aboutSection = siteRef.current?.querySelector('[data-name="Block 2"]');
           aboutSection?.scrollIntoView({ behavior: "smooth", block: "start" });
         } else if (index === 1) {
           document.getElementById("testimonials")?.scrollIntoView({ behavior: "smooth", block: "start" });
-=======
-          // О специалисте
-          const aboutSection = siteRef.current?.querySelector('[data-name="Block 2"]');
-          aboutSection?.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else if (index === 1) {
-          // Результаты
-          const resultsSection = siteRef.current?.querySelectorAll('[data-name="Container"]');
-          resultsSection.forEach((section) => {
-            if (
-              section.textContent?.includes("До и После") ||
-              section.textContent?.includes("кг") ||
-              section.textContent?.includes("месяц")
-            ) {
-              section.scrollIntoView({ behavior: "smooth", block: "center" });
-            }
-          });
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         }
       });
     });
 
-<<<<<<< HEAD
     // Social icons — event delegation on document (works even for lazily-mounted Sheet portal)
     const handleSocialClick = (e: MouseEvent) => {
       const link = (e.target as Element).closest('[data-name="Link"]') as HTMLElement | null;
@@ -243,7 +198,7 @@ export function InteractiveSite() {
       } else if (iconIndex === 1) {
         window.open("https://mail.google.com/mail/?view=cm&to=e.ozera@gmail.com&su=%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0", "_blank");
       } else if (iconIndex === 2) {
-        window.open("https://web.whatsapp.com/send?phone=905542643311&text=Здравствуйте", "_blank");
+        window.open("https://wa.me/905542643311?text=Здравствуйте", "_blank");
       }
     };
     document.addEventListener("click", handleSocialClick);
@@ -275,28 +230,7 @@ export function InteractiveSite() {
     };
 
     makeContactClickable("elena@ozer.ru", "https://mail.google.com/mail/?view=cm&to=e.ozera@gmail.com&su=%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0");
-    makeContactClickable("+7 (999) 123-45-67", "https://web.whatsapp.com/send?phone=905542643311&text=Здравствуйте");
-=======
-    // Make social links functional
-    const socialLinks = siteRef.current.querySelectorAll('[data-name="Link"]');
-    socialLinks.forEach((link, index) => {
-      const linkEl = link as HTMLElement;
-      linkEl.style.cursor = "pointer";
-
-      linkEl.addEventListener("click", () => {
-        if (index === 0) {
-          // Instagram
-          window.open("https://instagram.com", "_blank");
-        } else if (index === 1) {
-          // Telegram
-          window.open("https://t.me", "_blank");
-        } else if (index === 2) {
-          // WhatsApp
-          window.open("https://wa.me", "_blank");
-        }
-      });
-    });
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
+    makeContactClickable("+7 (999) 123-45-67", "https://wa.me/905542643311?text=Здравствуйте");
 
     // Make form inputs functional
     const nameInput = siteRef.current.querySelector('[data-name="Text Input"]');
@@ -304,29 +238,19 @@ export function InteractiveSite() {
     const phoneInput = siteRef.current.querySelector('[data-name="Phone Input"]');
     const messageInput = siteRef.current.querySelector('[data-name="Text Area"]');
 
-<<<<<<< HEAD
     const makeInputInteractive = (container: Element | null, field: keyof typeof formDataRef.current, type: string = "text") => {
       if (!container) return;
 
       // Guard: skip if input already created
       if (container.querySelector("input, textarea")) return;
 
-=======
-    const makeInputInteractive = (container: Element | null, field: keyof typeof formData, type: string = "text") => {
-      if (!container) return;
-
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       const placeholder = container.querySelector("p");
       if (!placeholder) return;
 
       if (field === "message") {
         const textarea = document.createElement("textarea");
         textarea.className =
-<<<<<<< HEAD
           'w-full bg-transparent text-[#111111] text-[16px] font-["Manrope:Regular",sans-serif] outline-none resize-none';
-=======
-          'w-full bg-transparent text-white text-[16px] font-["Manrope:Regular",sans-serif] outline-none resize-none';
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         textarea.placeholder = placeholder.textContent || "";
         textarea.style.fontFamily = "Manrope, sans-serif";
         textarea.rows = 4;
@@ -334,11 +258,7 @@ export function InteractiveSite() {
         textarea.addEventListener("focus", () => setFocusedInput(field));
         textarea.addEventListener("blur", () => setFocusedInput(null));
         textarea.addEventListener("input", (e) => {
-<<<<<<< HEAD
           formDataRef.current[field] = (e.target as HTMLTextAreaElement).value;
-=======
-          setFormData((prev) => ({ ...prev, [field]: (e.target as HTMLTextAreaElement).value }));
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         });
 
         placeholder.parentElement?.appendChild(textarea);
@@ -348,7 +268,6 @@ export function InteractiveSite() {
 
       const input = document.createElement("input");
       input.type = type;
-<<<<<<< HEAD
       input.className = 'w-full bg-transparent text-[#111111] text-[16px] font-["Manrope:Regular",sans-serif] outline-none';
       input.placeholder = placeholder.textContent || "";
       input.style.fontFamily = "Manrope, sans-serif";
@@ -363,16 +282,6 @@ export function InteractiveSite() {
       input.addEventListener("input", (e) => {
         formDataRef.current[field] = (e.target as HTMLInputElement).value;
         if (fieldSelectorMap[field]) setFieldError(fieldSelectorMap[field], false);
-=======
-      input.className = 'w-full bg-transparent text-white text-[16px] font-["Manrope:Regular",sans-serif] outline-none';
-      input.placeholder = placeholder.textContent || "";
-      input.style.fontFamily = "Manrope, sans-serif";
-
-      input.addEventListener("focus", () => setFocusedInput(field));
-      input.addEventListener("blur", () => setFocusedInput(null));
-      input.addEventListener("input", (e) => {
-        setFormData((prev) => ({ ...prev, [field]: (e.target as HTMLInputElement).value }));
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       });
 
       placeholder.parentElement?.appendChild(input);
@@ -404,24 +313,14 @@ export function InteractiveSite() {
 
     return () => {
       observer.disconnect();
-<<<<<<< HEAD
       document.removeEventListener("click", handleSocialClick);
       document.removeEventListener("click", handleLegalClick);
     };
   }, []);
-=======
-      buttons.forEach((button) => {
-        const clone = button.cloneNode(true);
-        button.parentNode?.replaceChild(clone, button);
-      });
-    };
-  }, [formData]);
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
 
   return (
     <motion.div ref={siteRef} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }} className="overflow-x-clip">
       <Site />
-<<<<<<< HEAD
 
       {/* Legal modals */}
       {legalModal && (
@@ -494,17 +393,6 @@ export function InteractiveSite() {
         </div>
       )}
       <style>{`
-=======
-      <style>{`
-        /* Logo subtitle Glass effect */
-        .logo-glass {
-          position: relative;
-          display: inline-block;
-          backdrop-filter: blur(3px) brightness(1.9) saturate(1.9) contrast(10);
-          -webkit-backdrop-filter: blur(3px) brightness(1.4) saturate(1.5) contrast(1.3);
-        }
-
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         /* Hero orbit animation */
         @keyframes hero-orbit-spin {
           from { transform: rotate(0deg); }
@@ -524,7 +412,6 @@ export function InteractiveSite() {
           animation-delay: var(--orbit-delay, 0s);
         }
 
-<<<<<<< HEAD
         /* Light theme base */
         html, body { background-color: #f7f4ed; }
 
@@ -541,8 +428,21 @@ export function InteractiveSite() {
         [data-name="Container52"] svg path,
         [data-name="Container55"] svg path { stroke: #00d492 !important; }
 
-=======
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
+        /* Grayscale all site images except hero, color on hover of parent */
+        [data-name="Site"] img {
+          filter: grayscale(100%);
+          transition: filter 0.5s ease;
+        }
+        [data-name="Site"] *:hover > img {
+          filter: grayscale(0%);
+        }
+        /* Hero images stay colorful */
+        [data-name="Hero block"] img,
+        [data-name="Hero block"] *:hover > img {
+          filter: none !important;
+          transition: none !important;
+        }
+
         /* Smooth scrolling */
         html {
           scroll-behavior: smooth;
@@ -683,22 +583,14 @@ export function InteractiveSite() {
         [data-name="Email Input"] input,
         [data-name="Phone Input"] input,
         [data-name="Text Area"] textarea {
-<<<<<<< HEAD
           color: #111111 !important;
-=======
-          color: white !important;
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         }
 
         [data-name="Text Input"] input::placeholder,
         [data-name="Email Input"] input::placeholder,
         [data-name="Phone Input"] input::placeholder,
         [data-name="Text Area"] textarea::placeholder {
-<<<<<<< HEAD
           color: rgba(0, 0, 0, 0.35);
-=======
-          color: rgba(255, 255, 255, 0.3);
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         }
 
         /* Contact info hover */
@@ -790,22 +682,11 @@ export function InteractiveSite() {
           transform: translateY(0);
         }
 
-<<<<<<< HEAD
         /* Header */
         [data-name="Header"] {
           position: sticky;
           top: 0;
           z-index: 1000;
-=======
-        /* Header animation */
-        [data-name="Header"] {
-          animation: slideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-          backdrop-filter: blur(10px);
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-          background: rgba(10, 10, 10, 0.8);
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         }
 
         @keyframes slideDown {

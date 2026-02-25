@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { useState, useEffect, useRef } from "react";
-=======
-import { useState } from "react";
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
 import svgPaths from "./svg-rbnoezal0z";
 import imgImageHealthyFood from "@/assets/c6321bc658df8915369191499ea66641bd0a1058.png";
 import imgImage from "@/assets/a8eea92051d14e6a7c46659a265d548f3f638cea.png";
@@ -17,11 +13,7 @@ import { Sheet, SheetContent, SheetTitle } from "@/app/components/ui/sheet";
 
 function ListMenu() {
   return (
-<<<<<<< HEAD
     <div className="content-stretch flex font-['Inter:Medium',sans-serif] font-medium gap-[32px] items-center leading-[20px] not-italic relative shrink-0 text-[14px] text-[rgba(0,0,0,0.65)] text-center tracking-[0.7px] uppercase" data-name="List menu">
-=======
-    <div className="content-stretch flex font-['Inter:Medium',sans-serif] font-medium gap-[32px] items-center leading-[20px] not-italic relative shrink-0 text-[14px] text-[rgba(255,255,255,0.7)] text-center tracking-[0.7px] uppercase" data-name="List menu">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <p className="relative shrink-0">О специалисте</p>
       <p className="relative shrink-0">Результаты</p>
       <p className="relative shrink-0">Блог</p>
@@ -51,11 +43,7 @@ function Icon() {
 function Link() {
   return (
     <div className="relative rounded-[6px] shrink-0 size-[36px]" data-name="Link">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[0.8px] relative size-full">
         <Icon />
       </div>
@@ -79,11 +67,7 @@ function Icon1() {
 function Link1() {
   return (
     <div className="relative rounded-[6px] shrink-0 size-[36px]" data-name="Link">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[0.8px] relative size-full">
         <Icon1 />
       </div>
@@ -111,11 +95,7 @@ function Icon2() {
 function Link2() {
   return (
     <div className="relative rounded-[6px] shrink-0 size-[36px]" data-name="Link">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[0.8px] relative size-full">
         <Icon2 />
       </div>
@@ -135,64 +115,39 @@ function Contacts() {
 
 function Frame5() {
   return (
-<<<<<<< HEAD
     <div className="flex flex-col items-start relative text-left w-full">
       <p className="bg-clip-text font-['Manrope:SemiBold',sans-serif] font-semibold leading-[1.15] relative text-[20px] sm:text-[28px] md:text-[46px] w-full" style={{ backgroundImage: "linear-gradient(97.8564deg, rgb(0, 212, 146) 0.5699%, rgb(0, 110, 76) 70.134%)", WebkitTextFillColor: "transparent" }}>
         НУТРИЦИОЛОГИЯ - ЭТО ПРОСТО!
       </p>
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic relative text-[10px] sm:text-[12px] text-[#00BA80] tracking-[4.2px] uppercase mt-[4px]">Art of Nutrition</p>
-=======
-    <div className="content-stretch flex flex-col items-start relative shrink-0 text-left">
-      <p className="bg-clip-text font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[28px] md:text-[46px]" style={{ backgroundImage: "linear-gradient(97.8564deg, rgb(0, 212, 146) 0.5699%, rgb(0, 110, 76) 70.134%)", WebkitTextFillColor: "transparent" }}>
-        НУТРИЦИОЛОГИЯ - ЭТО ПРОСТО!
-      </p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic relative shrink-0 text-[12px] text-[rgba(0,186,128,0.53)] tracking-[4.2px] uppercase">Art of Nutrition</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function HeroDescription() {
   return (
-<<<<<<< HEAD
     <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[1.6] md:leading-[1.9] relative shrink-0 text-[14px] text-[rgba(0,0,0,0.55)] text-justify max-w-[488px] w-full">
       <span className="md:hidden">Индивидуальные программы питания с заботой о вашем здоровье и целях. Продуманная стратегия для улучшения самочувствия.</span>
       <span className="hidden md:inline whitespace-pre-wrap">Индивидуальные программы питания, разработанные с заботой о вашем здоровье, энергии и долгосрочном благополучии. Мы учитываем ваши цели, образ жизни, состояние организма и вкусовые предпочтения. Это продуманная стратегия, которая помогает улучшить самочувствие, поддерживать форму и чувствовать себя уверенно каждый день.</span>
     </p>
-=======
-    <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[14px] text-[rgba(255,255,255,0.6)] text-justify max-w-[488px] w-full whitespace-pre-wrap">Индивидуальные программы питания, разработанные с заботой о вашем здоровье, энергии и долгосрочном благополучии. Мы учитываем ваши цели, образ жизни, состояние организма и вкусовые предпочтения. Это продуманная стратегия, которая помогает улучшить самочувствие, поддерживать форму и чувствовать себя уверенно каждый день.</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
   );
 }
 
 function Button() {
   return (
     <div className="h-[54px] relative shrink-0 w-full sm:w-[240px]" data-name="Button">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-solid border-[#111111] inset-0 pointer-events-none" />
       <p className="absolute font-['Manrope:Medium',sans-serif] font-medium leading-[20px] left-1/2 -translate-x-1/2 text-[14px] text-center text-[#111111] top-[17px] tracking-[0.7px] uppercase">Записаться</p>
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-solid border-white inset-0 pointer-events-none" />
-      <p className="absolute font-['Manrope:Medium',sans-serif] font-medium leading-[20px] left-1/2 -translate-x-1/2 text-[14px] text-center text-white top-[17px] tracking-[0.7px] uppercase">Записаться</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function Container1() {
-<<<<<<< HEAD
   return <div className="absolute border-[0.8px] border-[rgba(0,0,0,0.1)] border-solid left-0 rounded-[26843500px] size-[432px] top-0" data-name="Container" />;
 }
 
 function Container2() {
   return <div className="absolute border-[0.8px] border-[rgba(0,0,0,0.07)] border-solid left-[32px] rounded-[26843500px] size-[368px] top-[32px]" data-name="Container" />;
-=======
-  return <div className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid left-0 rounded-[26843500px] size-[432px] top-0" data-name="Container" />;
-}
-
-function Container2() {
-  return <div className="absolute border-[0.8px] border-[rgba(255,255,255,0.05)] border-solid left-[32px] rounded-[26843500px] size-[368px] top-[32px]" data-name="Container" />;
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
 }
 
 function ImageHealthyFood() {
@@ -209,11 +164,7 @@ function Container3() {
       <div className="overflow-hidden relative rounded-[inherit] size-full">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImageHealthyFood} />
       </div>
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-4 border-[rgba(0,0,0,0.07)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
-=======
-      <div aria-hidden="true" className="absolute border-4 border-[rgba(255,255,255,0.05)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -232,11 +183,7 @@ function Container4() {
       <div className="overflow-hidden relative rounded-[inherit] size-full hero-orbit-img">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage} />
       </div>
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[1.6px] border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
-=======
-      <div aria-hidden="true" className="absolute border-[1.6px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -255,11 +202,7 @@ function Container5() {
       <div className="overflow-hidden relative rounded-[inherit] size-full hero-orbit-img">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage1} />
       </div>
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[1.6px] border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
-=======
-      <div aria-hidden="true" className="absolute border-[1.6px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -278,11 +221,7 @@ function Container6() {
       <div className="overflow-hidden relative rounded-[inherit] size-full hero-orbit-img">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage2} />
       </div>
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[1.6px] border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
-=======
-      <div aria-hidden="true" className="absolute border-[1.6px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none rounded-[26843500px]" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -308,21 +247,12 @@ function Container() {
 
 function Frame1() {
   return (
-<<<<<<< HEAD
     <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-y-[16px] sm:gap-y-[24px] lg:gap-x-[32px] lg:gap-y-[16px] items-start relative shrink-0 w-full">
       <div className="lg:col-start-1 lg:row-start-1 lg:self-end">
         <Frame5 />
       </div>
       <div className="justify-self-center lg:col-start-2 lg:row-start-1 lg:row-span-4 lg:self-center w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[432px] lg:h-[432px] my-[12px] sm:my-[20px] md:my-[32px] lg:my-0">
         <div className="w-[432px] h-[432px] origin-top-left scale-[0.51] sm:scale-[0.6] md:scale-[0.74] lg:scale-100">
-=======
-    <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-y-[32px] lg:gap-x-[32px] lg:gap-y-[16px] items-start relative shrink-0 w-full">
-      <div className="lg:col-start-1 lg:row-start-1 lg:self-end">
-        <Frame5 />
-      </div>
-      <div className="justify-self-center lg:col-start-2 lg:row-start-1 lg:row-span-4 lg:self-center w-[260px] h-[260px] md:w-[320px] md:h-[320px] lg:w-[432px] lg:h-[432px] my-[24px] md:my-[32px] lg:my-0">
-        <div className="w-[432px] h-[432px] origin-top-left scale-[0.6] md:scale-[0.74] lg:scale-100">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
           <Container />
         </div>
       </div>
@@ -339,11 +269,7 @@ function Frame1() {
 function Paragraph() {
   return (
     <div className="content-stretch flex h-[16px] items-start relative shrink-0 w-full" data-name="Paragraph">
-<<<<<<< HEAD
       <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[0] min-h-px min-w-px not-italic relative text-[12px] text-[rgba(0,0,0,0.35)] text-center tracking-[3.6px] uppercase whitespace-pre-wrap">
-=======
-      <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[0] min-h-px min-w-px not-italic relative text-[12px] text-[rgba(255,255,255,0.3)] text-center tracking-[3.6px] uppercase whitespace-pre-wrap">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         <span className="leading-[16px]">{`Мы создаем `}</span>
         <span className="leading-[16px] text-[#00d492]">здоровье</span>
       </p>
@@ -367,17 +293,10 @@ function BurgerButton({ onClick }: { onClick: () => void }) {
       className="relative rounded-[6px] shrink-0 size-[36px] md:hidden"
       aria-label="Открыть меню"
     >
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[6px]" />
       <div className="content-stretch flex items-center justify-center relative size-full">
         <svg className="size-[16px]" fill="none" viewBox="0 0 16 16">
           <path d="M2 4h12M2 8h12M2 12h12" stroke="#333333" strokeWidth="1.33" strokeLinecap="round" />
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none rounded-[6px]" />
-      <div className="content-stretch flex items-center justify-center relative size-full">
-        <svg className="size-[16px]" fill="none" viewBox="0 0 16 16">
-          <path d="M2 4h12M2 8h12M2 12h12" stroke="white" strokeOpacity="0.6" strokeWidth="1.33" strokeLinecap="round" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         </svg>
       </div>
     </button>
@@ -386,7 +305,6 @@ function BurgerButton({ onClick }: { onClick: () => void }) {
 
 function Frame3() {
   const [menuOpen, setMenuOpen] = useState(false);
-<<<<<<< HEAD
   return (
     <div className="content-stretch flex flex-col gap-[24px] sm:gap-[83px] items-start relative shrink-0 w-full z-[1]">
       <div className="shrink-0 w-full py-[10px] px-0" data-name="Header">
@@ -407,29 +325,10 @@ function Frame3() {
             <Contacts />
           </div>
           <BurgerButton onClick={() => setMenuOpen(true)} />
-=======
-
-  return (
-    <div className="content-stretch flex flex-col gap-[24px] sm:gap-[83px] items-start relative shrink-0 w-full z-[1]">
-      <div className="h-[100px] relative shrink-0 w-full" data-name="Header">
-        <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[rgba(7,7,7,0.5)]" style={{ backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }} />
-        <div className="flex flex-row items-center size-full relative z-[1]">
-          <div className="content-stretch flex items-center justify-between relative size-full">
-            <Logo className="content-stretch flex flex-col items-start relative shrink-0" />
-            <div className="hidden md:flex">
-              <ListMenu />
-            </div>
-            <div className="hidden md:flex">
-              <Contacts />
-            </div>
-            <BurgerButton onClick={() => setMenuOpen(true)} />
-          </div>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         </div>
       </div>
 
       <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
-<<<<<<< HEAD
         <SheetContent side="right" className="bg-[#f7f4ed] border-[rgba(0,0,0,0.1)] p-0 text-[#111111]">
           <SheetTitle className="sr-only">Меню</SheetTitle>
           <div className="flex flex-col gap-[32px] p-[32px] pt-[64px]">
@@ -439,17 +338,6 @@ function Frame3() {
               <p className="font-['Inter:Medium',sans-serif] font-medium leading-[20px] text-[14px] text-[rgba(0,0,0,0.65)] tracking-[0.7px] uppercase cursor-pointer" onClick={() => { setMenuOpen(false); setTimeout(() => document.querySelector('[data-name="Form"]')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 350); }}>Записаться</p>
             </nav>
             <div className="border-t border-[rgba(0,0,0,0.1)] pt-[24px]">
-=======
-        <SheetContent side="right" className="bg-[#0a0a0a] border-[rgba(255,255,255,0.1)] p-0 text-white">
-          <SheetTitle className="sr-only">Меню</SheetTitle>
-          <div className="flex flex-col gap-[32px] p-[32px] pt-[64px]">
-            <nav className="flex flex-col gap-[24px]">
-              <p className="font-['Inter:Medium',sans-serif] font-medium leading-[20px] text-[14px] text-[rgba(255,255,255,0.7)] tracking-[0.7px] uppercase cursor-pointer" onClick={() => setMenuOpen(false)}>О специалисте</p>
-              <p className="font-['Inter:Medium',sans-serif] font-medium leading-[20px] text-[14px] text-[rgba(255,255,255,0.7)] tracking-[0.7px] uppercase cursor-pointer" onClick={() => setMenuOpen(false)}>Результаты</p>
-              <p className="font-['Inter:Medium',sans-serif] font-medium leading-[20px] text-[14px] text-[rgba(255,255,255,0.7)] tracking-[0.7px] uppercase cursor-pointer" onClick={() => setMenuOpen(false)}>Блог</p>
-            </nav>
-            <div className="border-t border-[rgba(255,255,255,0.1)] pt-[24px]">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
               <Contacts />
             </div>
           </div>
@@ -463,11 +351,7 @@ function Frame3() {
 
 function Frame4() {
   return (
-<<<<<<< HEAD
     <div className="content-stretch flex flex-col items-start mb-[-706px] relative shrink-0 w-full z-[2]">
-=======
-    <div className="content-stretch flex flex-col isolate items-start mb-[-706px] relative shrink-0 w-full z-[2]">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Frame3 />
     </div>
   );
@@ -476,11 +360,7 @@ function Frame4() {
 function HeroBlock() {
   return (
     <div className="content-stretch flex flex-col isolate items-start pb-[706px] relative shrink-0 w-full" data-name="Hero block">
-<<<<<<< HEAD
       <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[#edeade]" />
-=======
-      <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[#161616]" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Frame4 />
       <div className="h-[730px] mb-[-706px] opacity-5 shrink-0 w-full z-[1]" style={{ backgroundImage: "url(\'data:image/svg+xml;utf8,<svg viewBox=\\'0 0 1440 730\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'1\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(0 -70.532 -84.143 0 720 365)\\'><stop stop-color=\\'rgba(255,255,255,1)\\' offset=\\'0.00082891\\'/><stop stop-color=\\'rgba(191,191,191,0.75)\\' offset=\\'0.00062168\\'/><stop stop-color=\\'rgba(128,128,128,0.5)\\' offset=\\'0.00041446\\'/><stop stop-color=\\'rgba(64,64,64,0.25)\\' offset=\\'0.00020723\\'/><stop stop-color=\\'rgba(0,0,0,0)\\' offset=\\'0\\'/></radialGradient></defs></svg>\')" }} />
     </div>
@@ -488,11 +368,7 @@ function HeroBlock() {
 }
 
 function Container8() {
-<<<<<<< HEAD
   return <div className="hidden lg:block absolute border-[0.8px] border-[rgba(0,0,0,0.07)] border-solid h-[732px] left-[-16px] rounded-[10px] top-[-16px] w-[547.2px]" data-name="Container" />;
-=======
-  return <div className="hidden lg:block absolute border-[0.8px] border-[rgba(255,255,255,0.05)] border-solid h-[732px] left-[-16px] rounded-[10px] top-[-16px] w-[547.2px]" data-name="Container" />;
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
 }
 
 function Container9() {
@@ -505,15 +381,9 @@ function Container9() {
 
 function Container10() {
   return (
-<<<<<<< HEAD
     <div className="absolute bg-[rgba(0,0,0,0.12)] flex flex-col gap-[8px] items-center justify-center right-0 inset-y-0 px-[10px] md:px-[16px] lg:px-[24px] w-[76px] md:w-[104px] lg:w-[140px]" data-name="Container" style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
       <p className="font-['Manrope:Bold',sans-serif] font-bold text-[28px] md:text-[40px] lg:text-[48px] leading-[1] text-[#111111]">3+</p>
       <p className="font-['Manrope:Regular',sans-serif] font-normal text-[9px] md:text-[11px] lg:text-[12px] leading-[1.4] text-center text-[#111111] tracking-[0.6px] uppercase opacity-90">Лет<br/>опыта</p>
-=======
-    <div className="absolute bg-[rgba(0,0,0,0.07)] flex flex-col gap-[4px] md:gap-[8px] items-center right-0 top-[24px] pt-[16px] px-[16px] pb-[16px] md:pt-[32px] md:px-[32px] md:pb-[24px] w-[100px] md:w-[153.163px]" data-name="Container" style={{ backdropFilter: 'blur(2px)', WebkitBackdropFilter: 'blur(2px)' }}>
-      <p className="font-['Manrope:Bold',sans-serif] font-bold text-[32px] md:text-[48px] leading-[1] text-white">3+</p>
-      <p className="font-['Manrope:Regular',sans-serif] font-normal text-[10px] md:text-[12px] leading-[16px] text-center text-white tracking-[0.6px] uppercase opacity-90">Лет опыта</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -523,15 +393,10 @@ function Container7() {
     <div className="relative rounded-[10px] shrink-0 w-full h-[400px] md:h-[500px] lg:w-[515.2px] lg:h-[700px]" data-name="Container">
       <Container8 />
       <Container9 />
-<<<<<<< HEAD
-=======
-      <Container10 />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
-<<<<<<< HEAD
 function parseStatValue(value: string): { num: number; prefix: string; suffix: string } {
   const match = value.match(/^([^0-9]*)(\d+)(.*)$/);
   if (!match) return { num: 0, prefix: '', suffix: value };
@@ -575,24 +440,13 @@ function StatItem({ value, label }: { value: string; label: string }) {
         {prefix}{count}{suffix}
       </p>
       <p className="font-['Manrope:Regular',sans-serif] font-normal text-[11px] md:text-[12px] lg:text-[14px] leading-[16px] text-[rgba(0,0,0,0.4)] tracking-[0.6px] uppercase">{label}</p>
-=======
-function StatItem({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="flex-1 flex flex-col gap-[8px] items-center text-center">
-      <p className="font-['Manrope:Bold',sans-serif] font-bold text-[24px] md:text-[30px] lg:text-[36px] leading-[1.2] text-white">{value}</p>
-      <p className="font-['Manrope:Regular',sans-serif] font-normal text-[11px] md:text-[12px] lg:text-[14px] leading-[16px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">{label}</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function Container13() {
   return (
-<<<<<<< HEAD
     <div className="flex justify-between items-start relative shrink-0 w-full pt-[16px] pb-[16px] border-b border-[rgba(0,0,0,0.07)]" data-name="Container">
-=======
-    <div className="flex justify-between items-start relative shrink-0 w-full pt-[16px] pb-[16px] border-b border-[rgba(255,255,255,0.05)]" data-name="Container">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <StatItem value="500+" label="Клиентов" />
       <StatItem value="98%" label="Успеха" />
       <StatItem value="24/7" label="Поддержка" />
@@ -610,27 +464,15 @@ function PhilHeading() {
 
 function PhilDescription() {
   return (
-<<<<<<< HEAD
     <p className="font-['Inter:Regular',sans-serif] font-normal leading-[29.25px] not-italic relative shrink-0 text-[16px] md:text-[18px] text-[rgba(0,0,0,0.5)] max-w-[515px] w-full whitespace-pre-wrap">Более 10 лет я помогаю людям обрести гармонию через персонализированные программы питания. Каждая программа создается индивидуально с учетом вашего образа жизни и целей.</p>
-=======
-    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[29.25px] not-italic relative shrink-0 text-[16px] md:text-[18px] text-[rgba(255,255,255,0.5)] max-w-[515px] w-full whitespace-pre-wrap">Более 10 лет я помогаю людям обрести гармонию через персонализированные программы питания. Каждая программа создается индивидуально с учетом вашего образа жизни и целей.</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
   );
 }
 
 function BulletItem({ text }: { text: string }) {
   return (
-<<<<<<< HEAD
     <div className="flex gap-[16px] items-start relative shrink-0 w-full" data-name="Container">
       <div className="bg-[#00d492] h-[24px] shrink-0 w-px mt-[2px]" />
       <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[14px] md:text-[16px] text-[rgba(0,0,0,0.55)] flex-1 min-w-0">{text}</p>
-=======
-    <div className="content-stretch flex gap-[16px] h-[32px] items-start relative shrink-0 w-full" data-name="Container">
-      <div className="bg-[#00d492] h-[32px] shrink-0 w-px" />
-      <div className="h-[28px] relative flex-1 min-w-0" data-name="Paragraph">
-        <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[16px] text-[rgba(255,255,255,0.6)] whitespace-nowrap mt-[1.8px]">{text}</p>
-      </div>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -648,24 +490,15 @@ function Container23() {
 function Button1() {
   return (
     <div className="h-[54px] relative shrink-0 w-full sm:w-[240px]" data-name="Button">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-solid border-[#111111] inset-0 pointer-events-none" />
       <p className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[20px] left-1/2 -translate-x-1/2 not-italic text-[14px] text-center text-[#111111] top-[17px] tracking-[0.7px] uppercase">Узнать больше</p>
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-solid border-white inset-0 pointer-events-none" />
-      <p className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[20px] left-1/2 -translate-x-1/2 not-italic text-[14px] text-center text-white top-[17px] tracking-[0.7px] uppercase">Узнать больше</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function Block() {
   return (
-<<<<<<< HEAD
     <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-x-[32px] lg:gap-x-[64px] gap-y-[24px] lg:gap-y-[32px] items-start relative shrink-0 w-full" data-name="Block 2">
-=======
-    <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-[32px] items-start relative shrink-0 w-full" data-name="Block 2">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="lg:col-start-2 lg:row-start-1">
         <PhilHeading />
       </div>
@@ -681,11 +514,7 @@ function Block() {
       <div className="lg:col-start-2 lg:row-start-4">
         <Container23 />
       </div>
-<<<<<<< HEAD
       <div className="lg:col-start-2 lg:row-start-5 mt-[8px] lg:mt-[16px]">
-=======
-      <div className="lg:col-start-2 lg:row-start-5">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         <Button1 />
       </div>
     </div>
@@ -694,11 +523,7 @@ function Block() {
 
 function Frame7() {
   return (
-<<<<<<< HEAD
     <div className="lg:min-h-[783px] relative shrink-0 w-full py-[32px] lg:py-0 lg:-mt-[100px] lg:-mb-[100px]">
-=======
-    <div className="min-h-[783px] relative shrink-0 w-full py-[32px] lg:py-0 -mt-[100px] -mb-[100px]">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="absolute inset-0 pointer-events-none">
         <GradientContainer />
       </div>
@@ -714,17 +539,10 @@ function Frame8() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0 w-full">
       <p className="bg-clip-text font-['Manrope:SemiBold',sans-serif] font-semibold leading-[1.2] relative shrink-0 text-[28px] md:text-[36px] lg:text-[48px] text-center" style={{ backgroundImage: "linear-gradient(97.71deg, rgb(0, 212, 146) 0.5699%, rgb(0, 110, 76) 70.134%)", WebkitTextFillColor: "transparent" }}>
-<<<<<<< HEAD
         <span className="leading-[normal] text-[#111111]">Первая консультация</span>
         <span className="leading-[normal]">{` бесплатно`}</span>
       </p>
       <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative shrink-0 text-[14px] md:text-[16px] text-[rgba(0,0,0,0.5)] text-center w-full max-w-[622px] whitespace-pre-wrap">Познакомимся, обсудим ваши цели и я предложу оптимальный план действий</p>
-=======
-        <span className="leading-[normal] text-white">Первая консультация</span>
-        <span className="leading-[normal]">{` бесплатно`}</span>
-      </p>
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative shrink-0 text-[14px] md:text-[16px] text-[rgba(255,255,255,0.5)] text-center w-full max-w-[622px] whitespace-pre-wrap">Познакомимся, обсудим ваши цели и я предложу оптимальный план действий</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -744,13 +562,8 @@ function Icon3() {
 function Button2() {
   return (
     <div className="h-[54px] relative shrink-0 w-full sm:w-[240px]" data-name="Button">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-solid border-[#111111] inset-0 pointer-events-none" />
       <p className="-translate-x-1/2 absolute font-['Inter:Medium',sans-serif] font-medium leading-[20px] left-1/2 not-italic text-[14px] text-center text-[#111111] top-[17px] tracking-[0.7px] uppercase">Записаться</p>
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-solid border-white inset-0 pointer-events-none" />
-      <p className="-translate-x-1/2 absolute font-['Inter:Medium',sans-serif] font-medium leading-[20px] left-1/2 not-italic text-[14px] text-center text-white top-[17px] tracking-[0.7px] uppercase">Записаться</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Icon3 />
     </div>
   );
@@ -758,7 +571,6 @@ function Button2() {
 
 function Consultation() {
   return (
-<<<<<<< HEAD
     <div className="relative shrink-0 w-full" data-name="Consultation">
       {/* Full-width background */}
       <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[#edeade]" />
@@ -768,12 +580,6 @@ function Consultation() {
         <Frame8 />
         <Button2 />
       </div>
-=======
-    <div className="content-stretch flex flex-col gap-[48px] items-center pb-[64px] pt-[104px] relative shrink-0 w-full" data-name="Consultation" style={{ backgroundImage: "url(\'data:image/svg+xml;utf8,<svg viewBox=\\'0 0 1200 376\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'0.09000000357627869\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(41.5 12.487 -39.853 112.49 600 188)\\'><stop stop-color=\\'rgba(255,255,255,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(202,202,202,1)\\' offset=\\'0.25\\'/><stop stop-color=\\'rgba(148,148,148,1)\\' offset=\\'0.5\\'/><stop stop-color=\\'rgba(121,121,121,1)\\' offset=\\'0.625\\'/><stop stop-color=\\'rgba(95,95,95,1)\\' offset=\\'0.75\\'/><stop stop-color=\\'rgba(68,68,68,1)\\' offset=\\'0.875\\'/><stop stop-color=\\'rgba(41,41,41,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>\')" }}>
-      <Frame8 />
-      <p className="-translate-x-1/2 absolute font-['Inter:Regular',sans-serif] font-normal leading-[16px] left-1/2 not-italic text-[#00d492] text-[12px] text-center top-[20px] tracking-[3.6px] uppercase w-full whitespace-pre-wrap">Специальное предложение</p>
-      <Button2 />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -782,13 +588,8 @@ function Frame9() {
   return (
     <div className="content-stretch flex flex-col gap-[16px] items-center justify-center py-[32px] relative shrink-0 w-full max-w-[622px]">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[#00d492] text-[12px] tracking-[3.6px] uppercase">Отзывы</p>
-<<<<<<< HEAD
       <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[28px] md:text-[36px] lg:text-[48px] text-[#111111]">Истории успеха</p>
       <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative text-[14px] md:text-[16px] text-[rgba(0,0,0,0.5)] text-center w-full">Реальные результаты реальных людей</p>
-=======
-      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[28px] md:text-[36px] lg:text-[48px] text-white">Истории успеха</p>
-      <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative shrink-0 text-[14px] md:text-[16px] text-[rgba(255,255,255,0.5)] text-center">Реальные результы реальных людей</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -806,13 +607,8 @@ function QuoteIcon({ className = '' }: { className?: string }) {
 
 function ReviewCard({ quote, kg, name, profession, imgSrc }: { quote: string; kg: string; name: string; profession: string; imgSrc: string }) {
   return (
-<<<<<<< HEAD
     <div className="bg-[rgba(0,0,0,0.04)] flex-[1_0_0] min-w-0 relative">
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none" />
-=======
-    <div className="bg-[rgba(255,255,255,0.05)] flex-[1_0_0] min-w-0 relative">
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
 
       {/* Mobile: horizontal layout */}
       <div className="flex flex-row gap-[16px] p-[24px] md:p-[32px] lg:hidden relative">
@@ -826,17 +622,10 @@ function ReviewCard({ quote, kg, name, profession, imgSrc }: { quote: string; kg
         </div>
         <div className="flex flex-col gap-[12px] flex-1 min-w-0">
           <QuoteIcon />
-<<<<<<< HEAD
           <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[14px] md:text-[16px] text-[rgba(0,0,0,0.55)]">{quote}</p>
           <div className="flex flex-col mt-auto pt-[12px] border-t border-[rgba(0,0,0,0.1)]">
             <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-[#111111] tracking-[0.35px] uppercase">{name}</p>
             <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(0,0,0,0.4)] tracking-[0.6px] uppercase">{profession}</p>
-=======
-          <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] text-[14px] md:text-[16px] text-[rgba(255,255,255,0.6)]">{quote}</p>
-          <div className="flex flex-col mt-auto pt-[12px] border-t border-[rgba(255,255,255,0.1)]">
-            <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">{name}</p>
-            <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">{profession}</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
           </div>
         </div>
       </div>
@@ -845,32 +634,19 @@ function ReviewCard({ quote, kg, name, profession, imgSrc }: { quote: string; kg
       <div className="hidden lg:block h-[394.4px] relative">
         <QuoteIcon className="!size-[40px] absolute left-[32.8px] top-[32.8px]" />
         <div className="absolute left-[32.8px] top-[96.8px] w-[288px]">
-<<<<<<< HEAD
           <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[26px] text-[16px] text-[rgba(0,0,0,0.55)]">{quote}</p>
-=======
-          <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[26px] text-[16px] text-[rgba(255,255,255,0.6)]">{quote}</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         </div>
         <div className="absolute border-[0.8px] border-[rgba(0,212,146,0.5)] border-solid h-[36px] left-[32.8px] top-[227.2px]">
           <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] px-[16px] text-[#00d492] text-[14px] py-[7px] tracking-[0.7px] uppercase">{kg}</p>
         </div>
         <div className="absolute flex gap-[16px] h-[72.8px] items-center left-[32.8px] pt-[0.8px] top-[288.8px] w-[288.525px]">
-<<<<<<< HEAD
           <div aria-hidden="true" className="absolute border-[rgba(0,0,0,0.1)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
-=======
-          <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
           <div className="relative shrink-0 size-[48px]">
             <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSrc} />
           </div>
           <div className="flex flex-col justify-center shrink-0">
-<<<<<<< HEAD
             <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-[#111111] tracking-[0.35px] uppercase">{name}</p>
             <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(0,0,0,0.4)] tracking-[0.6px] uppercase">{profession}</p>
-=======
-            <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[20px] text-[14px] text-white tracking-[0.35px] uppercase">{name}</p>
-            <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase">{profession}</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
           </div>
         </div>
       </div>
@@ -890,11 +666,7 @@ function Frame11() {
 
 function Frame10() {
   return (
-<<<<<<< HEAD
     <div id="testimonials" className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full lg:-mt-[100px]">
-=======
-    <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full -mt-[100px]">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Frame9 />
       <Frame11 />
     </div>
@@ -903,17 +675,10 @@ function Frame10() {
 
 function Frame13() {
   return (
-<<<<<<< HEAD
     <div className="content-stretch flex flex-col gap-[16px] items-center justify-center py-[32px] relative shrink-0 w-full max-w-[622px]">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[#00d492] text-[12px] tracking-[3.6px] uppercase">Контакты</p>
       <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[32px] md:text-[48px] text-[#111111]">Начните путь</p>
       <div className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative shrink-0 text-[14px] md:text-[16px] text-[rgba(0,0,0,0.5)] text-center w-full max-w-[280px] whitespace-pre-wrap">
-=======
-    <div className="content-stretch flex flex-col gap-[16px] items-center justify-center py-[32px] relative shrink-0 w-[622px]">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[#00d492] text-[12px] tracking-[3.6px] uppercase">Контакты</p>
-      <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[normal] relative shrink-0 text-[48px] text-white">Начните путь</p>
-      <div className="font-['Manrope:Regular',sans-serif] font-normal h-[23px] leading-[24px] relative shrink-0 text-[16px] text-[rgba(255,255,255,0.5)] text-center w-[280px] whitespace-pre-wrap">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         <p className="mb-0">Первая консультация бесплатно</p>
         <p>&nbsp;</p>
       </div>
@@ -923,87 +688,51 @@ function Frame13() {
 
 function TextInput() {
   return (
-<<<<<<< HEAD
     <div className="absolute bg-[rgba(0,0,0,0.04)] h-[57.6px] left-0 right-0 top-0" data-name="Text Input">
       <div className="content-stretch flex items-center overflow-clip px-[24px] py-[16px] relative rounded-[inherit] size-full">
         <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.35)] w-[73px] whitespace-pre-wrap">Ваше имя</p>
       </div>
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none" />
-=======
-    <div className="absolute bg-[rgba(255,255,255,0.05)] h-[57.6px] left-0 top-0 w-[523.2px]" data-name="Text Input">
-      <div className="content-stretch flex items-center overflow-clip px-[24px] py-[16px] relative rounded-[inherit] size-full">
-        <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[16px] text-[rgba(255,255,255,0.3)] w-[73px] whitespace-pre-wrap">Ваше имя</p>
-      </div>
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function EmailInput() {
   return (
-<<<<<<< HEAD
     <div className="absolute bg-[rgba(0,0,0,0.04)] h-[57.6px] left-0 right-0 top-[81.6px]" data-name="Email Input">
       <div className="content-stretch flex items-center overflow-clip px-[24px] py-[16px] relative rounded-[inherit] size-full">
         <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.35)] w-[40px] whitespace-pre-wrap">Email</p>
       </div>
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none" />
-=======
-    <div className="absolute bg-[rgba(255,255,255,0.05)] h-[57.6px] left-0 top-[81.6px] w-[523.2px]" data-name="Email Input">
-      <div className="content-stretch flex items-center overflow-clip px-[24px] py-[16px] relative rounded-[inherit] size-full">
-        <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[16px] text-[rgba(255,255,255,0.3)] w-[40px] whitespace-pre-wrap">Email</p>
-      </div>
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function PhoneInput() {
   return (
-<<<<<<< HEAD
     <div className="absolute bg-[rgba(0,0,0,0.04)] h-[57.6px] left-0 right-0 top-[163.2px]" data-name="Phone Input">
       <div className="content-stretch flex items-center overflow-clip px-[24px] py-[16px] relative rounded-[inherit] size-full">
         <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.35)] w-[67px] whitespace-pre-wrap">Телефон</p>
       </div>
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none" />
-=======
-    <div className="absolute bg-[rgba(255,255,255,0.05)] h-[57.6px] left-0 top-[163.2px] w-[523.2px]" data-name="Phone Input">
-      <div className="content-stretch flex items-center overflow-clip px-[24px] py-[16px] relative rounded-[inherit] size-full">
-        <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[normal] relative shrink-0 text-[16px] text-[rgba(255,255,255,0.3)] w-[67px] whitespace-pre-wrap">Телефон</p>
-      </div>
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function TextArea() {
   return (
-<<<<<<< HEAD
     <div className="absolute bg-[rgba(0,0,0,0.04)] h-[153.6px] left-0 right-0 top-[244.8px]" data-name="Text Area">
       <div className="content-stretch flex items-start overflow-clip px-[24px] py-[16px] relative rounded-[inherit] size-full">
         <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative shrink-0 text-[16px] text-[rgba(0,0,0,0.35)] w-[203px] whitespace-pre-wrap">Расскажите о ваших целях</p>
       </div>
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.1)] border-solid inset-0 pointer-events-none" />
-=======
-    <div className="absolute bg-[rgba(255,255,255,0.05)] h-[153.6px] left-0 top-[244.8px] w-[523.2px]" data-name="Text Area">
-      <div className="content-stretch flex items-start overflow-clip px-[24px] py-[16px] relative rounded-[inherit] size-full">
-        <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[24px] relative shrink-0 text-[16px] text-[rgba(255,255,255,0.3)] w-[203px] whitespace-pre-wrap">Расскажите о ваших целях</p>
-      </div>
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.1)] border-solid inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function Icon7() {
   return (
-<<<<<<< HEAD
     <div className="relative shrink-0 size-[16px]" data-name="Icon">
-=======
-    <div className="absolute left-[301.9px] size-[16px] top-[18px]" data-name="Icon">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16 16">
         <g id="Icon">
           <path d={svgPaths.p43eff00} id="Vector" stroke="var(--stroke-0, white)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.33333" />
@@ -1015,17 +744,11 @@ function Icon7() {
 
 function Button3() {
   return (
-<<<<<<< HEAD
     <div className="absolute border-[0.8px] border-[rgba(0,0,0,0.15)] border-solid h-[53.6px] left-0 right-0 top-[428px]" data-name="Button">
       <div className="flex items-center justify-center gap-[8px] h-full">
         <p className="font-['Manrope:Medium',sans-serif] font-medium leading-[20px] text-[14px] text-center text-[#111111] tracking-[0.7px] uppercase">Отправить</p>
         <Icon7 />
       </div>
-=======
-    <div className="absolute border-[0.8px] border-[rgba(255,255,255,0.2)] border-solid h-[53.6px] left-0 top-[428px] w-[523.2px]" data-name="Button">
-      <p className="-translate-x-1/2 absolute font-['Manrope:Medium',sans-serif] font-medium leading-[20px] left-[247.19px] text-[14px] text-center text-white top-[15.8px] tracking-[0.7px] uppercase w-[87px] whitespace-pre-wrap">Отправить</p>
-      <Icon7 />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1058,11 +781,7 @@ function Icon8() {
 function Container49() {
   return (
     <div className="relative shrink-0 size-[40px]" data-name="Container">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none" />
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[0.8px] relative size-full">
         <Icon8 />
       </div>
@@ -1073,11 +792,7 @@ function Container49() {
 function Paragraph7() {
   return (
     <div className="absolute content-stretch flex h-[15.988px] items-start left-0 top-0 w-[101.713px]" data-name="Paragraph">
-<<<<<<< HEAD
       <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(0,0,0,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Email</p>
-=======
-      <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Email</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1087,11 +802,7 @@ function Container50() {
     <div className="h-[43.987px] relative shrink-0 w-[101.713px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Paragraph7 />
-<<<<<<< HEAD
         <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-[#111111] top-[17.79px] w-[106px] whitespace-pre-wrap">elena@ozer.ru</p>
-=======
-        <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-white top-[17.79px] w-[106px] whitespace-pre-wrap">elena@ozer.ru</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       </div>
     </div>
   );
@@ -1126,11 +837,7 @@ function Icon9() {
 function Container52() {
   return (
     <div className="relative shrink-0 size-[40px]" data-name="Container">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none" />
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[0.8px] relative size-full">
         <Icon9 />
       </div>
@@ -1141,11 +848,7 @@ function Container52() {
 function Paragraph8() {
   return (
     <div className="absolute content-stretch flex h-[15.988px] items-start left-0 top-0 w-[137.05px]" data-name="Paragraph">
-<<<<<<< HEAD
       <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(0,0,0,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Телефон</p>
-=======
-      <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Телефон</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1155,11 +858,7 @@ function Container53() {
     <div className="h-[43.987px] relative shrink-0 w-[137.05px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Paragraph8 />
-<<<<<<< HEAD
         <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-[#111111] top-[17.79px] w-[142px] whitespace-pre-wrap">+7 (999) 123-45-67</p>
-=======
-        <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-white top-[17.79px] w-[142px] whitespace-pre-wrap">+7 (999) 123-45-67</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       </div>
     </div>
   );
@@ -1190,11 +889,7 @@ function Icon10() {
 function Container55() {
   return (
     <div className="relative shrink-0 size-[40px]" data-name="Container">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none" />
-=======
-      <div aria-hidden="true" className="absolute border-[0.8px] border-[rgba(255,255,255,0.2)] border-solid inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center p-[0.8px] relative size-full">
         <Icon10 />
       </div>
@@ -1205,11 +900,7 @@ function Container55() {
 function Paragraph9() {
   return (
     <div className="content-stretch flex h-[15.988px] items-start relative shrink-0 w-full" data-name="Paragraph">
-<<<<<<< HEAD
       <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(0,0,0,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Локация</p>
-=======
-      <p className="flex-[1_0_0] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.4)] tracking-[0.6px] uppercase whitespace-pre-wrap">Локация</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1217,11 +908,7 @@ function Paragraph9() {
 function Paragraph10() {
   return (
     <div className="h-[24px] relative shrink-0 w-full" data-name="Paragraph">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-[#111111] top-[-2.2px] w-[120px] whitespace-pre-wrap">Москва, Россия</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[24px] left-0 text-[16px] text-white top-[-2.2px] w-[120px] whitespace-pre-wrap">Москва, Россия</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1248,13 +935,8 @@ function Container54() {
 
 function Container47() {
   return (
-<<<<<<< HEAD
     <div className="content-stretch flex flex-col gap-[24px] items-start pt-[48.8px] relative shrink-0 w-full" data-name="Container">
       <div aria-hidden="true" className="absolute border-[rgba(0,0,0,0.1)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
-=======
-    <div className="content-stretch flex flex-col gap-[24px] h-[228.762px] items-start pt-[48.8px] relative shrink-0 w-full" data-name="Container">
-      <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.1)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Container48 />
       <Container51 />
       <Container54 />
@@ -1264,11 +946,7 @@ function Container47() {
 
 function Container46() {
   return (
-<<<<<<< HEAD
     <div className="flex flex-col gap-[48px] items-start relative shrink-0 w-full lg:w-[523.2px]" data-name="Container">
-=======
-    <div className="content-stretch flex flex-col gap-[48px] h-[758.362px] items-start relative shrink-0 w-[523.2px]" data-name="Container">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Form />
       <Container47 />
     </div>
@@ -1276,11 +954,7 @@ function Container46() {
 }
 
 function Container58() {
-<<<<<<< HEAD
   return <div className="hidden lg:block absolute border-[0.8px] border-[rgba(0,0,0,0.07)] border-solid h-[791px] left-[-16.2px] rounded-[10px] top-[-16px] w-[555px]" data-name="Container" />;
-=======
-  return <div className="absolute border-[0.8px] border-[rgba(255,255,255,0.05)] border-solid h-[791px] left-[-16.2px] rounded-[10px] top-[-16px] w-[555px]" data-name="Container" />;
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
 }
 
 function Icon11() {
@@ -1298,26 +972,16 @@ function Icon11() {
 
 function Heading() {
   return (
-<<<<<<< HEAD
     <div className="relative shrink-0 w-full" data-name="Heading 4">
       <p className="font-['Inter:Bold',sans-serif] font-bold leading-[28px] not-italic text-[18px] md:text-[20px] text-white tracking-[0.5px] uppercase">Гарантия</p>
-=======
-    <div className="h-[28px] relative shrink-0 w-full" data-name="Heading 4">
-      <p className="absolute font-['Inter:Bold',sans-serif] font-bold leading-[28px] left-0 not-italic text-[20px] text-white top-[-1.2px] tracking-[0.5px] uppercase">Гарантия</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function Paragraph11() {
   return (
-<<<<<<< HEAD
     <div className="relative shrink-0 w-full" data-name="Paragraph">
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic text-[13px] md:text-[14px] text-[rgba(255,255,255,0.85)]">Результат через 2 недели или вернём деньги</p>
-=======
-    <div className="h-[20px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[20px] not-italic text-[14px] text-[rgba(255,255,255,0.9)] whitespace-nowrap">Результат через 2 недели или вернем деньги</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1335,11 +999,7 @@ function Container61() {
 
 function Container60() {
   return (
-<<<<<<< HEAD
     <div className="absolute bg-[rgba(0,0,0,0.45)] content-stretch flex gap-[16px] items-center left-0 right-0 p-[16px] bottom-0 w-full" data-name="Container" style={{ backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)' }}>
-=======
-    <div className="absolute bg-[rgba(0,0,0,0.07)] content-stretch flex gap-[16px] items-center left-1/2 -translate-x-1/2 p-[16px] top-[654.99px]" data-name="Container" style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Icon11 />
       <Container61 />
     </div>
@@ -1348,13 +1008,8 @@ function Container60() {
 
 function Image7() {
   return (
-<<<<<<< HEAD
     <div className="h-full overflow-clip relative shrink-0 w-full" data-name="Image (Елена Озер)">
       <img alt="" className="absolute inset-0 max-w-none object-cover object-[center_20%] pointer-events-none size-full" src={imgImage1} />
-=======
-    <div className="h-[759px] overflow-clip relative shrink-0 w-full" data-name="Image (Елена Озер)">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage1} />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Container60 />
     </div>
   );
@@ -1362,11 +1017,7 @@ function Image7() {
 
 function Container59() {
   return (
-<<<<<<< HEAD
     <div className="absolute inset-0 overflow-clip rounded-[10px]" data-name="Container">
-=======
-    <div className="absolute content-stretch flex flex-col h-[759px] items-start left-[-0.2px] overflow-clip rounded-[10px] top-[0.01px] w-[523px]" data-name="Container">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Image7 />
     </div>
   );
@@ -1374,11 +1025,7 @@ function Container59() {
 
 function Container57() {
   return (
-<<<<<<< HEAD
     <div className="h-[400px] md:h-[560px] lg:h-[700px] relative shrink-0 w-full lg:w-[523.2px]" data-name="Container">
-=======
-    <div className="h-[700px] relative shrink-0 w-[523.2px]" data-name="Container">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Container58 />
       <Container59 />
     </div>
@@ -1387,11 +1034,7 @@ function Container57() {
 
 function Container45() {
   return (
-<<<<<<< HEAD
     <div className="flex flex-col lg:flex-row items-start gap-[48px] lg:gap-0 lg:justify-between relative shrink-0 w-full" data-name="Container">
-=======
-    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-name="Container">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Container46 />
       <Container57 />
     </div>
@@ -1400,11 +1043,7 @@ function Container45() {
 
 function Frame12() {
   return (
-<<<<<<< HEAD
     <div className="content-stretch flex flex-col gap-[32px] md:gap-[48px] items-center relative shrink-0 w-full">
-=======
-    <div className="content-stretch flex flex-col gap-[48px] items-center relative shrink-0 w-full">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Frame13 />
       <Container45 />
     </div>
@@ -1413,24 +1052,15 @@ function Frame12() {
 
 function Paragraph12() {
   return (
-<<<<<<< HEAD
     <div className="relative shrink-0 w-full" data-name="Paragraph">
       <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[22.75px] text-[14px] text-[rgba(0,0,0,0.4)]">Ваш путь к здоровому питанию</p>
-=======
-    <div className="h-[22.75px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[22.75px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.4px]">Ваш путь к здоровому питанию</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
 
 function Container64() {
   return (
-<<<<<<< HEAD
     <div className="flex flex-col gap-[16px] items-start relative shrink-0" data-name="Container">
-=======
-    <div className="absolute content-stretch flex flex-col gap-[16px] h-[123.988px] items-start left-0 top-0 w-[241.6px]" data-name="Container">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Logo className="content-stretch flex flex-col items-start relative shrink-0" />
       <Paragraph12 />
     </div>
@@ -1440,11 +1070,7 @@ function Container64() {
 function Heading1() {
   return (
     <div className="content-stretch flex h-[15.988px] items-start relative shrink-0 w-full" data-name="Heading 4">
-<<<<<<< HEAD
       <p className="flex-[1_0_0] font-['Manrope:Medium',sans-serif] font-medium leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(0,0,0,0.55)] tracking-[0.6px] uppercase whitespace-pre-wrap">Услуги</p>
-=======
-      <p className="flex-[1_0_0] font-['Manrope:Medium',sans-serif] font-medium leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.6)] tracking-[0.6px] uppercase whitespace-pre-wrap">Услуги</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1452,11 +1078,7 @@ function Heading1() {
 function ListItem() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(0,0,0,0.4)] top-[-0.2px]">Персональное меню</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.2px]">Персональное меню</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1464,11 +1086,7 @@ function ListItem() {
 function ListItem1() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(0,0,0,0.4)] top-[-0.2px]">Программы питания</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.2px]">Программы питания</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1476,11 +1094,7 @@ function ListItem1() {
 function ListItem2() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(0,0,0,0.4)] top-[-0.2px]">Консультации</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.2px]">Консультации</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1507,11 +1121,7 @@ function Container65() {
 function Heading2() {
   return (
     <div className="content-stretch flex h-[15.988px] items-start relative shrink-0 w-full" data-name="Heading 4">
-<<<<<<< HEAD
       <p className="flex-[1_0_0] font-['Inter:Medium',sans-serif] font-medium leading-[16px] min-h-px min-w-px not-italic relative text-[12px] text-[rgba(0,0,0,0.55)] tracking-[0.6px] uppercase whitespace-pre-wrap">О специалисте</p>
-=======
-      <p className="flex-[1_0_0] font-['Inter:Medium',sans-serif] font-medium leading-[16px] min-h-px min-w-px not-italic relative text-[12px] text-[rgba(255,255,255,0.6)] tracking-[0.6px] uppercase whitespace-pre-wrap">О специалисте</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1519,11 +1129,7 @@ function Heading2() {
 function ListItem3() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(0,0,0,0.4)] top-[-0.2px]">Образование</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.2px]">Образование</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1531,11 +1137,7 @@ function ListItem3() {
 function ListItem4() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(0,0,0,0.4)] top-[-0.2px]">Отзывы</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.2px]">Отзывы</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1543,11 +1145,7 @@ function ListItem4() {
 function ListItem5() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(0,0,0,0.4)] top-[-0.2px]">Связаться</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.2px]">Связаться</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1574,11 +1172,7 @@ function Container66() {
 function Heading3() {
   return (
     <div className="content-stretch flex h-[15.988px] items-start relative shrink-0 w-full" data-name="Heading 4">
-<<<<<<< HEAD
       <p className="flex-[1_0_0] font-['Manrope:Medium',sans-serif] font-medium leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(0,0,0,0.55)] tracking-[0.6px] uppercase whitespace-pre-wrap">Контакты</p>
-=======
-      <p className="flex-[1_0_0] font-['Manrope:Medium',sans-serif] font-medium leading-[16px] min-h-px min-w-px relative text-[12px] text-[rgba(255,255,255,0.6)] tracking-[0.6px] uppercase whitespace-pre-wrap">Контакты</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1586,11 +1180,7 @@ function Heading3() {
 function ListItem6() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(0,0,0,0.4)] top-[-0.2px]">elena@ozer.ru</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.2px]">elena@ozer.ru</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1598,11 +1188,7 @@ function ListItem6() {
 function ListItem7() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(0,0,0,0.4)] top-[-0.2px]">+7 (999) 123-45-67</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.2px]">+7 (999) 123-45-67</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1610,11 +1196,7 @@ function ListItem7() {
 function ListItem8() {
   return (
     <div className="h-[20px] relative shrink-0 w-full" data-name="List Item">
-<<<<<<< HEAD
       <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(0,0,0,0.4)] top-[-0.2px]">Москва, Россия</p>
-=======
-      <p className="absolute font-['Manrope:Regular',sans-serif] font-normal leading-[20px] left-0 text-[14px] text-[rgba(255,255,255,0.4)] top-[-0.2px]">Москва, Россия</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
     </div>
   );
 }
@@ -1631,11 +1213,7 @@ function List2() {
 
 function Container67() {
   return (
-<<<<<<< HEAD
     <div className="flex flex-col gap-[24px] items-start relative shrink-0" data-name="Container">
-=======
-    <div className="absolute content-stretch flex flex-col gap-[24px] h-[123.988px] items-start left-[289.6px] top-0 w-[241.6px]" data-name="Container">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Heading3 />
       <List2 />
     </div>
@@ -1644,11 +1222,7 @@ function Container67() {
 
 function Container63() {
   return (
-<<<<<<< HEAD
     <div className="flex flex-col sm:flex-row gap-[32px] sm:justify-between items-start relative shrink-0 w-full" data-name="Container">
-=======
-    <div className="h-[123.988px] relative shrink-0 w-full" data-name="Container">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <Container64 />
       {/* <Container65 /> */}
       {/* <Container66 /> */}
@@ -1661,11 +1235,7 @@ function Paragraph13() {
   return (
     <div className="h-[15.988px] relative shrink-0 w-[121.412px]" data-name="Paragraph">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
-<<<<<<< HEAD
         <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] relative shrink-0 text-[12px] text-[rgba(0,0,0,0.35)] tracking-[0.6px] uppercase">© 2026 Елена Озер</p>
-=======
-        <p className="font-['Manrope:Regular',sans-serif] font-normal leading-[16px] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.3)] tracking-[0.6px] uppercase">© 2026 Елена Озер</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       </div>
     </div>
   );
@@ -1675,11 +1245,7 @@ function Link3() {
   return (
     <div className="h-[15.988px] relative shrink-0 w-[69.45px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
-<<<<<<< HEAD
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[12px] text-[rgba(0,0,0,0.35)] tracking-[0.6px] uppercase">Политика</p>
-=======
-        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[12px] text-[rgba(255,255,255,0.3)] tracking-[0.6px] uppercase">Политика</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       </div>
     </div>
   );
@@ -1689,11 +1255,7 @@ function Link4() {
   return (
     <div className="h-[15.988px] relative shrink-0 w-[48.188px]" data-name="Link">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-start relative size-full">
-<<<<<<< HEAD
         <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[12px] text-[rgba(0,0,0,0.35)] tracking-[0.6px] uppercase">Оферта</p>
-=======
-        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[16px] not-italic relative shrink-0 text-[12px] text-[rgba(255,255,255,0.3)] tracking-[0.6px] uppercase">Оферта</p>
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       </div>
     </div>
   );
@@ -1713,11 +1275,7 @@ function Container69() {
 function Container68() {
   return (
     <div className="h-[48.788px] relative shrink-0 w-full" data-name="Container">
-<<<<<<< HEAD
       <div aria-hidden="true" className="absolute border-[rgba(0,0,0,0.07)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
-=======
-      <div aria-hidden="true" className="absolute border-[rgba(255,255,255,0.05)] border-solid border-t-[0.8px] inset-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-between pt-[0.8px] relative size-full">
           <Paragraph13 />
@@ -1730,13 +1288,8 @@ function Container68() {
 
 function Container62() {
   return (
-<<<<<<< HEAD
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="flex flex-col gap-[48px] items-start relative w-full">
-=======
-    <div className="h-[220.775px] relative shrink-0 w-full" data-name="Container">
-      <div className="content-stretch flex flex-col gap-[48px] items-start relative size-full">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
         <Container63 />
         <Container68 />
       </div>
@@ -1746,15 +1299,9 @@ function Container62() {
 
 function Footer() {
   return (
-<<<<<<< HEAD
     <div className="content-stretch flex flex-col items-start pt-[48px] md:pt-[64.8px] pb-[32px] relative shrink-0 w-full" data-name="Footer">
       <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-[#f0ece0]" />
       <div aria-hidden="true" className="absolute left-1/2 -translate-x-1/2 w-screen border-[rgba(0,0,0,0.07)] border-solid border-t-[0.8px] inset-y-0 pointer-events-none" />
-=======
-    <div className="content-stretch flex flex-col h-[350px] items-start pt-[64.8px] relative shrink-0 w-full" data-name="Footer">
-      <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen bg-black" />
-      <div aria-hidden="true" className="absolute left-1/2 -translate-x-1/2 w-screen border-[rgba(255,255,255,0.05)] border-solid border-t-[0.8px] inset-y-0 pointer-events-none" />
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <div className="relative z-[1] w-full">
         <Container62 />
       </div>
@@ -1764,11 +1311,7 @@ function Footer() {
 
 export default function Site() {
   return (
-<<<<<<< HEAD
     <div className="bg-[#f7f4ed] content-stretch flex flex-col gap-[60px] md:gap-[100px] lg:gap-[140px] items-center relative w-full max-w-[1240px] mx-auto px-5" data-name="Site">
-=======
-    <div className="bg-[#0a0a0a] content-stretch flex flex-col gap-[140px] items-center relative w-full max-w-[1240px] mx-auto px-5" data-name="Site">
->>>>>>> d19f48c2027632490b3220c479497c3892c669a9
       <HeroBlock />
       <Frame7 />
       <Consultation />
